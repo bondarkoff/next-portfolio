@@ -15,12 +15,18 @@ export const About = () => {
                     detail and a relentless
                     <br></br>pursuit of innovation, <span>Bondarkoff</span> crafts captivating
                     <span>visual narratives</span>,<br></br>
-                    immersive <span>digital realms</span>, and functional yet
+                    immersive <span>digital realms</span>, and functional yet{' '}
                     <span>aesthetically pleasing products.</span>
                 </p>
             </div>
             <div className='pos-r'>
-                <Image src={'/avatar.png'} alt='Avatar Image' width={350} height={350} priority />
+                <Image
+                    src={'/images/avatar.png'}
+                    alt='Avatar Image'
+                    width={350}
+                    height={350}
+                    priority
+                />
                 <div className={styles.blur}></div>
             </div>
         </div>

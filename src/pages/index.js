@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
 import { About } from '@/components/about/About';
+import { Projects } from '@/components/projects/Projects';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
                 <Sidebar />
                 <div className='container'>
                     <About />
+                    <Projects />
                 </div>
             </div>
         </>
