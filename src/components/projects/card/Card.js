@@ -12,9 +12,10 @@ export const Card = () => {
                 <Image
                     src={'/images/bg/bg-1.png'}
                     width={693}
-                    height={375}
+                    height={355}
                     alt='Card Background'
                     className={styles['card__header-image']}
+                    priority={true}
                 />
             </div>
             <div className={styles['card__footer']}>

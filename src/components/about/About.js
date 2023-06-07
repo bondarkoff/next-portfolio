@@ -9,11 +9,11 @@ export const About = () => {
                 <p className={styles.description}>
                     Welcome to the extraordinary world of <span>Bondarkoff</span>, a versatile and
                     <br></br>
-                    imaginative artist who skillfully navigates the realms of
+                    imaginative artist who skillfully navigates the realms of{' '}
                     <span>product design</span>,<br></br>
                     <span>photography</span> and <span>digital art</span>. With a keen eye for
                     detail and a relentless
-                    <br></br>pursuit of innovation, <span>Bondarkoff</span> crafts captivating
+                    <br></br>pursuit of innovation, <span>Bondarkoff</span> crafts captivating{' '}
                     <span>visual narratives</span>,<br></br>
                     immersive <span>digital realms</span>, and functional yet{' '}
                     <span>aesthetically pleasing products.</span>

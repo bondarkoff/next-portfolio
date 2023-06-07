@@ -6,9 +6,10 @@
         line-height: 48px;
     }
     &__wrapper {
+        margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(2, 690px);
-        grid-template-rows: repeat(2, 460px);
+        grid-template-rows: repeat(2, 445px);
         grid-column-gap: 60px;
         grid-row-gap: 60px;
     }

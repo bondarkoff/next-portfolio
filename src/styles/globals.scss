@@ -13,11 +13,3 @@ html {
     margin: 0 auto;
     width: 1440px;
 }
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 690px);
-    grid-template-rows: repeat(2, 460px);
-    grid-column-gap: 60px;
-    grid-row-gap: 60px;
-}
