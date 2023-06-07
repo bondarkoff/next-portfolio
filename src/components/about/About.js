@@ -4,9 +4,9 @@ import styles from './About.module.scss';
 export const About = () => {
     return (
         <div className={styles.about}>
-            <div className='text'>
-                <h1 className={styles.title}>Bondarkoff</h1>
-                <p className={styles.description}>
+            <div className={styles['about__text']}>
+                <h1 className={styles['about__text-title']}>Bondarkoff</h1>
+                <p className={styles['about__text-descr']}>
                     Welcome to the extraordinary world of <span>Bondarkoff</span>, a versatile and
                     <br></br>
                     imaginative artist who skillfully navigates the realms of{' '}
@@ -26,8 +26,9 @@ export const About = () => {
                     width={350}
                     height={350}
                     priority
+                    className={styles['about__image']}
                 />
-                <div className={styles.blur}></div>
+                <div className={styles['about__blur']}></div>
             </div>
         </div>
     );
