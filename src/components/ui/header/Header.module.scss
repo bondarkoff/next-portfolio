@@ -5,19 +5,24 @@
     justify-content: space-between;
     align-items: center;
     &__text {
-        &-title {
+        &-title,
+        &-typed {
             font-weight: 600;
-            font-size: 48px;
-            line-height: 56px;
+            font-size: 60px;
+            line-height: 150%;
+            margin-right: 10px;
         }
-        &-descr {
-            margin-top: 40px;
+        &-quote {
             font-weight: 200;
-            font-size: 20px;
-            line-height: 28px;
+            font-size: 26px;
+            line-height: 150%;
             span {
                 font-weight: 400;
             }
+        }
+        &-typed {
+            margin-right: 0px;
+            font-weight: 400;
         }
     }
     &__blur {

@@ -1,3 +1,4 @@
+import Typed from 'react-typed';
 import Image from 'next/image';
 import styles from './Header.module.scss';
 
@@ -5,18 +6,30 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles['header__text']}>
-                <h1 className={styles['header__text-title']}>Bondarkoff</h1>
-                <p className={styles['header__text-descr']}>
-                    Welcome to the extraordinary world of <span>Bondarkoff</span>, a versatile and
-                    <br></br>
-                    imaginative artist who skillfully navigates the realms of{' '}
-                    <span>product design</span>,<br></br>
-                    <span>photography</span> and <span>digital art</span>. With a keen eye for
-                    detail and a relentless
-                    <br></br>pursuit of innovation, <span>Bondarkoff</span> crafts captivating{' '}
-                    <span>visual narratives</span>,<br></br>
-                    immersive <span>digital realms</span>, and functional yet{' '}
-                    <span>aesthetically pleasing products.</span>
+                <div className='d-flex flex-row aic'>
+                    <h1 className={styles['header__text-title']}>Bondarkoff —</h1>
+                    <Typed
+                        strings={[
+                            'Frontend Developer.',
+                            'Nice guy.',
+                            'Gamer.',
+                            'Music Lover.',
+                            'Self Learner.',
+                            'Gym Goers.',
+                            'Traveler.',
+                        ]}
+                        typeSpeed={85}
+                        backSpeed={75}
+                        loop
+                        className={styles['header__text-typed']}
+                    />
+                </div>
+                <p className={styles['header__text-quote']}>
+                    <span>My motto is:</span>{' '}
+                    <i>
+                        &quot;If you wanna win the lottery, you have to make the money to buy a
+                        ticket.&quot;
+                    </i>
                 </p>
             </div>
             <div className='pos-r'>
