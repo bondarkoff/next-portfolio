@@ -15,38 +15,3 @@
     font-size: 48px;
     line-height: 56px;
 }
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%),
-        rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04), 0px 2px 3px rgba(0, 0, 0, 0.12),
-        0px 6px 9px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(20px);
-    border-radius: 80px;
-    margin: 40px;
-    li {
-        list-style-type: none;
-        margin-top: 12px;
-        &:first-child {
-            margin-top: 0px;
-        }
-    }
-    &-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px;
-        text-decoration: none;
-        color: #fff;
-        width: 48px;
-        height: 48px;
-        &:active,
-        &:focus {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 32px;
-        }
-    }
-}
