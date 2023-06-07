@@ -21,7 +21,7 @@ export const Header = () => {
             </div>
             <div className='pos-r'>
                 <Image
-                    src={'/images/avatar.png'}
+                    src={'/images/sticker.webp'}
                     alt='Avatar Image'
                     width={350}
                     height={350}
