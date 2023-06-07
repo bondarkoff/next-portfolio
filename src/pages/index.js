@@ -1,8 +1,9 @@
 import Head from 'next/head';
 
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
-import { About } from '@/components/about/About';
+import { Header } from '@/components/ui/header/Header';
 import { Projects } from '@/components/projects/Projects';
+import { Footer } from '@/components/ui/footer/Footer';
 
 export default function Home() {
     return (
@@ -12,12 +13,13 @@ export default function Home() {
                 <meta name='description' content='Bondarkoff Next Portfolio' />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
             </Head>
-            <div className=''>
-                <Sidebar />
-                <div className='container'>
-                    <About />
+            <Sidebar />
+            <div className='container'>
+                <Header />
+                <main>
                     <Projects />
-                </div>
+                </main>
+                <Footer />
             </div>
         </>
     );

@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google';
+
 import 'css-shortcut';
 
 import '@/styles/globals.scss';
@@ -7,8 +8,8 @@ const inter = Inter({ weight: ['200', '400', '500', '700', '800', '900'], subset
 
 export default function App({ Component, pageProps }) {
     return (
-        <main className={inter.className}>
+        <div className={inter.className}>
             <Component {...pageProps} />
-        </main>
+        </div>
     );
 }

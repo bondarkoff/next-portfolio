@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import styles from './About.module.scss';
+import styles from './Header.module.scss';
 
-export const About = () => {
+export const Header = () => {
     return (
-        <div className={styles.about}>
-            <div className={styles['about__text']}>
-                <h1 className={styles['about__text-title']}>Bondarkoff</h1>
-                <p className={styles['about__text-descr']}>
+        <header className={styles.header}>
+            <div className={styles['header__text']}>
+                <h1 className={styles['header__text-title']}>Bondarkoff</h1>
+                <p className={styles['header__text-descr']}>
                     Welcome to the extraordinary world of <span>Bondarkoff</span>, a versatile and
                     <br></br>
                     imaginative artist who skillfully navigates the realms of{' '}
@@ -26,10 +26,10 @@ export const About = () => {
                     width={350}
                     height={350}
                     priority
-                    className={styles['about__image']}
+                    className={styles['header__image']}
                 />
-                <div className={styles['about__blur']}></div>
+                <div className={styles['header__blur']}></div>
             </div>
-        </div>
+        </header>
     );
 };
