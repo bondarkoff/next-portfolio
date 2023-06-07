@@ -1,17 +1,31 @@
-.text {
+.about {
     padding-top: 40px;
-    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .description {
     margin-top: 40px;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 20px;
     line-height: 28px;
+    span {
+        font-weight: 400;
+    }
 }
 
 .title {
     font-weight: 600;
     font-size: 48px;
     line-height: 56px;
+}
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 33%;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #15161a 75%);
 }
