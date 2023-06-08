@@ -1,6 +1,6 @@
 export const projects = [
     {
-        id: 1,
+        id: '1',
         title: 'Morent Car Rental',
         subtitle: 'A car rental website',
         description: 'SITE DESCRIPTION',
@@ -20,7 +20,7 @@ export const projects = [
         isReact: true,
     },
     {
-        id: 2,
+        id: '2',
         title: 'Marvel Information Portal',
         subtitle: 'A Marvel universe information portal',
         description: 'SITE DESCRIPTION',
@@ -38,7 +38,7 @@ export const projects = [
         isReact: true,
     },
     {
-        id: 3,
+        id: '3',
         title: 'React Sneakers',
         subtitle: 'A sneakers online store',
         description: 'SITE DESCRIPTION',
@@ -57,7 +57,7 @@ export const projects = [
         isReact: true,
     },
     {
-        id: 4,
+        id: '4',
         title: 'Website Portfolio',
         subtitle: 'My own old portfolio',
         description: 'SITE DESCRIPTION',
