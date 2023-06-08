@@ -1,4 +1,4 @@
-import { Card } from './card/Card';
+import { Card } from '@/components/card/Card';
 import styles from './Projects.module.scss';
 
 export const Projects = ({ items }) => {
