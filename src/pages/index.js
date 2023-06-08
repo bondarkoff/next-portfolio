@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Head from 'next/head';
 
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
@@ -6,6 +8,21 @@ import { Projects } from '@/components/projects/Projects';
 import { Footer } from '@/components/ui/footer/Footer';
 
 export default function Home() {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const itemsResponse = await axios.get('http://localhost:3000/api/projects');
+                setProjects(itemsResponse.data);
+            } catch (error) {
+                alert('Error while loading data. Details in console.');
+                console.log(error);
+            }
+        }
+        fetchData();
+    }, []);
+
     return (
         <>
             <Head>
@@ -17,7 +34,7 @@ export default function Home() {
             <div className='container'>
                 <Header />
                 <main>
-                    <Projects />
+                    <Projects items={projects} />
                 </main>
                 <Footer />
             </div>

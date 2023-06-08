@@ -1,19 +1,20 @@
 import Image from 'next/image';
 import styles from './Card.module.scss';
 
-export const Card = () => {
+export const Card = ({ title, subtitle, description, stack, image, demo, github }) => {
     return (
         <div className={styles.card}>
             <div className={styles['card__header']}>
+                <div className={styles['card__header-blur']}></div>
                 <div className={styles['card__header-text']}>
-                    <h3 className={styles['card__header-title']}>Design Projects</h3>
-                    <p className={styles['card__header-subtitle']}>Replace with cover</p>
+                    <h3 className={styles['card__header-title']}>{title}</h3>
+                    <p className={styles['card__header-subtitle']}>{subtitle}</p>
                 </div>
                 <Image
-                    src={'/images/bg/bg-1.png'}
+                    src={image}
                     width={693}
                     height={355}
-                    alt='Card Background'
+                    alt={title}
                     className={styles['card__header-image']}
                     priority={true}
                 />

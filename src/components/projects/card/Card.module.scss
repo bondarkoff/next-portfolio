@@ -15,6 +15,7 @@
     transition: all ease-in-out 0.2s;
     cursor: pointer;
     &__header {
+        position: relative;
         display: flex;
         width: 100%;
         height: 355px;
@@ -25,13 +26,18 @@
         &-text {
             position: relative;
             z-index: 5;
+            transition: all ease-in-out 0.2s;
         }
         &-title {
+            position: relative;
+            z-index: 2;
             font-weight: 900;
             font-size: 80px;
             line-height: 104px;
         }
         &-subtitle {
+            position: relative;
+            z-index: 2;
             font-weight: 400;
             font-size: 24px;
             line-height: 32px;
@@ -41,6 +47,18 @@
             position: absolute;
             border-radius: 34px;
             top: 0;
+            filter: blur(2px);
+        }
+        &-blur {
+            position: absolute;
+            width: 101%;
+            height: 101%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.4);
+            filter: blur(3px);
+            z-index: 1;
+            border-radius: 40px;
+            transition: all ease-in-out 0.2s;
         }
     }
     &__footer {
@@ -70,5 +88,18 @@
             0px 8px 25px rgba(0, 0, 0, 1);
         transform: scale(1.03);
         backdrop-filter: blur(16px);
+        .card {
+            &__header {
+                &-blur {
+                    opacity: 0;
+                }
+                &-text {
+                    opacity: 0;
+                }
+                &-image {
+                    filter: blur(0px);
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ export const Header = () => {
                             'Gamer.',
                             'Music Lover.',
                             'Self Learner.',
-                            'Gym Goers.',
+                            'Gym Goer.',
                             'Traveler.',
                         ]}
                         typeSpeed={85}
