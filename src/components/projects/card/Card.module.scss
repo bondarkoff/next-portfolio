@@ -1,7 +1,7 @@
 .card {
     position: relative;
     width: 690px;
-    height: 445px;
+    height: 480px;
     background: radial-gradient(
         100% 100% at 50% 0%,
         rgba(255, 255, 255, 0.2) 0%,
@@ -62,13 +62,13 @@
         }
     }
     &__footer {
-        padding: 20px 40px;
+        height: 125px;
+        padding: 0px 40px;
         display: flex;
         align-items: center;
-        height: 90px;
         &-icon {
             transform: scale(1.5);
-            margin-right: 20px;
+            margin-right: 25px;
         }
         &-title {
             font-weight: 600;
@@ -76,11 +76,25 @@
             line-height: 24px;
             color: rgba(255, 255, 255, 0.8);
         }
+        &-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         &-subtitle {
+            margin: 7px 7px 0px 0px;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
             color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #333;
+            background: #333;
+            border-radius: 5px;
+            padding: 2px;
+            list-style-type: none;
+            &:last-child {
+                margin-right: 0px;
+            }
         }
     }
     &:hover {
