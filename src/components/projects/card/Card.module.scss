@@ -9,7 +9,6 @@
     );
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
         0px 8px 16px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(12px);
     border-radius: 40px;
     overflow: hidden;
     transition: all ease-in-out 0.2s;
@@ -74,6 +73,7 @@
             font-weight: 600;
             font-size: 18px;
             line-height: 24px;
+            backface-visibility: hidden;
             color: rgba(255, 255, 255, 0.8);
         }
         &-wrapper {
@@ -92,6 +92,7 @@
             border-radius: 5px;
             padding: 2px;
             list-style-type: none;
+            backface-visibility: hidden;
             &:last-child {
                 margin-right: 0px;
             }
@@ -101,7 +102,6 @@
         box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.5), 0px 5px 25px rgba(0, 0, 0, 0.7),
             0px 8px 25px rgba(0, 0, 0, 1);
         transform: scale(1.03);
-        backdrop-filter: blur(16px);
         .card {
             &__header {
                 &-blur {
