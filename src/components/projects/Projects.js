@@ -16,6 +16,7 @@ export const Projects = ({ items }) => {
                         demo={item.demo}
                         image={item.image}
                         github={item.github}
+                        react={item.isReact}
                     />
                 ))}
             </div>
