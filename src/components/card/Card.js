@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Card.module.scss';
 import { ReactIcon } from './ReactIcon';
 import { JavaScriptIcon } from './JavaScriptIcon';
+import { CardTags } from '../tags/Tags';
 
 export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
     return (
@@ -33,15 +34,7 @@ export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
                     </div>
                     <div className='d-flex flex-col'>
                         <div className={styles['card__footer-title']}>{type}</div>
-                        <div>
-                            <ul className={styles['card__footer-wrapper']}>
-                                {stack.map((item, index) => (
-                                    <li className={styles['card__footer-subtitle']} key={index}>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        <CardTags stack={stack} />
                     </div>
                 </div>
             </div>

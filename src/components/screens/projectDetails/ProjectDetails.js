@@ -4,6 +4,7 @@ import { ReactIcon } from '@/components/card/ReactIcon';
 import { JavaScriptIcon } from '@/components/card/JavaScriptIcon';
 
 import styles from './ProjectDetails.module.scss';
+import { CardTags } from '@/components/tags/Tags';
 
 export default function ProjectDetails({ project }) {
     return (
@@ -23,6 +24,11 @@ export default function ProjectDetails({ project }) {
                                     <p className='mt-10'>{project.description}</p>
                                     <p className='mt-10'>{project.functionality}</p>
                                 </div>
+                                {project.stack ? (
+                                    <CardTags stack={project.stack} />
+                                ) : (
+                                    <div>Loading...</div>
+                                )}
                             </div>
                             <div>
                                 {project.isReact ? (
