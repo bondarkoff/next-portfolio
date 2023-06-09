@@ -18,6 +18,16 @@
             line-height: 28px;
             color: rgba(255, 255, 255, 0.6);
         }
+        &-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.6);
+            img {
+                margin-right: 8px;
+                transform: scale(-1, 1);
+            }
+        }
     }
     &__stack {
         display: flex;

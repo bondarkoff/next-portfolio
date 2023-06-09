@@ -6,6 +6,8 @@ import { JavaScriptIcon } from '@/components/card/JavaScriptIcon';
 import { Slider } from '@/components/slider/Slider';
 
 import styles from './ProjectDetails.module.scss';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProjectDetails({ project }) {
     return (
@@ -20,6 +22,15 @@ export default function ProjectDetails({ project }) {
                     <div className='container'>
                         <div className={styles.header}>
                             <div className={styles['header__text']}>
+                                <Link href='/' className={styles['header__text-link']}>
+                                    <Image
+                                        src='/images/arrow.svg'
+                                        width={20}
+                                        height={20}
+                                        alt='Back to home'
+                                    />
+                                    <p>Back to home</p>
+                                </Link>
                                 <h2 className={styles['header__text-title']}>{project.title}</h2>
                                 <div className={styles['header__text-descr']}>
                                     <p className='mt-10'>{project.description}</p>
