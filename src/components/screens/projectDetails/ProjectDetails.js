@@ -21,7 +21,7 @@ export default function ProjectDetails({ project }) {
                                 <h2 className={styles['header__text-title']}>{project.title}</h2>
                                 <div className={styles['header__text-descr']}>
                                     <p className='mt-10'>{project.description}</p>
-                                    <p className='mt-10'>{project.function}</p>
+                                    <p className='mt-10'>{project.functionality}</p>
                                 </div>
                             </div>
                             <div>
