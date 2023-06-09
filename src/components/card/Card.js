@@ -16,7 +16,7 @@ export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
                         <p className={styles['card__header-subtitle']}>{subtitle}</p>
                     </div>
                     <Image
-                        src={image}
+                        src={image[0]}
                         width={693}
                         height={355}
                         alt={title}

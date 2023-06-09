@@ -1,10 +1,11 @@
 import Head from 'next/head';
 
+import { CardTags } from '@/components/tags/Tags';
 import { ReactIcon } from '@/components/card/ReactIcon';
 import { JavaScriptIcon } from '@/components/card/JavaScriptIcon';
+import { Slider } from '@/components/slider/Slider';
 
 import styles from './ProjectDetails.module.scss';
-import { CardTags } from '@/components/tags/Tags';
 
 export default function ProjectDetails({ project }) {
     return (
@@ -25,7 +26,9 @@ export default function ProjectDetails({ project }) {
                                     <p className='mt-10'>{project.functionality}</p>
                                 </div>
                                 {project.stack ? (
-                                    <CardTags stack={project.stack} />
+                                    <div className='mt-3'>
+                                        <CardTags stack={project.stack} />
+                                    </div>
                                 ) : (
                                     <div>Loading...</div>
                                 )}
@@ -38,6 +41,7 @@ export default function ProjectDetails({ project }) {
                                 )}
                             </div>
                         </div>
+                        <Slider project={project} />
                     </div>
                 ) : (
                     <div>Loading...</div>
