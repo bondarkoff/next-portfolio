@@ -22,10 +22,19 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: max-content;
             color: rgba(255, 255, 255, 0.6);
-            img {
+            transition: all 0.2s ease-in-out;
+            svg {
                 margin-right: 8px;
                 transform: scale(-1, 1);
+                transition: all 0.2s ease-in-out;
+            }
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+                svg {
+                    fill: #fff;
+                }
             }
         }
     }

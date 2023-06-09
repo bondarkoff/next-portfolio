@@ -1,13 +1,14 @@
 import Head from 'next/head';
 
 import { CardTags } from '@/components/tags/Tags';
-import { ReactIcon } from '@/components/card/ReactIcon';
-import { JavaScriptIcon } from '@/components/card/JavaScriptIcon';
+import { ReactIcon } from '@/components/assets/ReactIcon';
+import { JavaScriptIcon } from '@/components/assets/JavaScriptIcon';
+import { Footer } from '@/components/ui/footer/Footer';
 import { Slider } from '@/components/slider/Slider';
+import { ArrowIcon } from '@/components/assets/ArrowIcon';
 
 import styles from './ProjectDetails.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function ProjectDetails({ project }) {
     return (
@@ -23,12 +24,7 @@ export default function ProjectDetails({ project }) {
                         <div className={styles.header}>
                             <div className={styles['header__text']}>
                                 <Link href='/' className={styles['header__text-link']}>
-                                    <Image
-                                        src='/images/arrow.svg'
-                                        width={20}
-                                        height={20}
-                                        alt='Back to home'
-                                    />
+                                    <ArrowIcon width={20} height={20} />
                                     <p>Back to home</p>
                                 </Link>
                                 <h2 className={styles['header__text-title']}>{project.title}</h2>
@@ -58,6 +54,7 @@ export default function ProjectDetails({ project }) {
                     <div>Loading...</div>
                 )}
             </div>
+            <Footer />
         </>
     );
 }

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Card.module.scss';
-import { ReactIcon } from './ReactIcon';
-import { JavaScriptIcon } from './JavaScriptIcon';
+import { ReactIcon } from '../assets/ReactIcon';
+import { JavaScriptIcon } from '../assets/JavaScriptIcon';
 import { CardTags } from '../tags/Tags';
 
 export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
