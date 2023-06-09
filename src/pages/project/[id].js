@@ -24,5 +24,13 @@ export default function ProjectPage() {
         fetchData();
     }, [id]);
 
+    useEffect(() => {
+        if (router.isReady) {
+            setProject(id);
+        }
+    }, [router.isReady]);
+
+    if (!project) return null;
+
     return <ProjectDetails project={project} />;
 }
