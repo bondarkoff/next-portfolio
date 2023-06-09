@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import styles from './Project.module.scss';
+import ProjectDetails from '@/components/screens/projectDetails/ProjectDetails';
 
 export default function ProjectPage() {
     const [project, setProject] = useState([]);
@@ -24,17 +24,5 @@ export default function ProjectPage() {
         fetchData();
     }, [id]);
 
-    return (
-        <div>
-            {project ? (
-                <div className='container'>
-                    <div className={styles.header}>
-                        <h2 className={styles['header__title']}>{project.title}</h2>
-                    </div>
-                </div>
-            ) : (
-                <div>Loading...</div>
-            )}
-        </div>
-    );
+    return <ProjectDetails project={project} />;
 }
