@@ -6,7 +6,7 @@ export const projects = [
         description:
             'A web application that provides information about available rental cars. The homepage features a list of available rental cars. Each car is presented in a card format, displaying key information such as a photo, model, price, and availability.',
         function:
-            'The website offers various functional features to ensure convenience and user-friendliness. Users can browse the list of available cars, filter them by name (such as model or manufacturer), and view detailed information about each car, including user reviews.',
+            'The website offers various functional features to ensure convenience and user-friendliness. Users can browse the list of available cars, filter them by name (such as model or manufacturer), and view detailed information about each car, including user reviews. Deployed on Vercel and Netlify.',
         stack: [
             'React + hooks',
             'React Router',
@@ -21,6 +21,7 @@ export const projects = [
         demo: 'https://react-vite-rent.vercel.app/cars',
         github: 'https://github.com/bondarkoff/react-vite-rent',
         isReact: true,
+        type: 'Web Application',
     },
     {
         id: '2',
@@ -29,7 +30,7 @@ export const projects = [
         description:
             'A web application that provides information about Marvel comic characters. The website interface is user-friendly, allowing users to navigate effortlessly through sections and find the desired information.',
         function:
-            'In the "Characters" section, users can browse a list of Marvel characters and access detailed information about each character, including the comics in which they have appeared, images, brief descriptions, and links to Wikipedia for more information. In the "Comics" section, information about various Marvel comics is provided.',
+            'In the "Characters" section, users can browse a list of Marvel characters and access detailed information about each character, including the comics in which they have appeared, images, brief descriptions, and links to Wikipedia for more information. In the "Comics" section, information about various Marvel comics is provided. Deployed on Vercel.',
         stack: [
             'React + hooks',
             'React Router',
@@ -39,8 +40,9 @@ export const projects = [
             'SCSS',
         ],
         image: '/images/projects/cover-2.png',
-        demo: 'https://react-vite-rent.vercel.app/cars',
-        github: 'https://github.com/bondarkoff/react-vite-rent',
+        demo: 'https://react-marvel-two.vercel.app/',
+        github: 'https://github.com/bondarkoff/react-marvel',
+        type: 'Web Application',
         isReact: true,
     },
     {
@@ -50,7 +52,7 @@ export const projects = [
         description:
             'A web application that showcases and sells sneakers. The homepage displays a collection of sneakers in a grid format, allowing users to easily browse through the available options.',
         function:
-            'Users can view the collection of sneakers and explore detailed information about each pair, including product images and pricing. Additionally, users can add sneakers to their cart and proceed to a checkout page to complete their purchase.',
+            'Users can view the collection of sneakers and explore detailed information about each pair, including product images and pricing. Additionally, users can add sneakers to their cart and proceed to a checkout page to complete their purchase. Deployed on Vercel and Netlify.',
         stack: [
             'React + hooks',
             'React Router',
@@ -61,8 +63,9 @@ export const projects = [
             'Macro-css',
         ],
         image: '/images/projects/cover-3.png',
-        demo: 'https://react-vite-rent.vercel.app/cars',
-        github: 'https://github.com/bondarkoff/react-vite-rent',
+        demo: 'https://react-sneakers-fawn.vercel.app/',
+        github: 'https://github.com/bondarkoff/react-sneakers',
+        type: 'Web Application',
         isReact: true,
     },
     {
@@ -75,8 +78,9 @@ export const projects = [
             'The website provides the ability to view my portfolio and browse through my projects. The "Works" section presents my works with descriptions of each project and corresponding images. Contact information is also provided, allowing users to reach out to me for inquiries or questions.',
         stack: ['JavaScript', 'SCSS', 'Gulp'],
         image: '/images/projects/cover-4.png',
-        demo: 'https://react-vite-rent.vercel.app/cars',
-        github: 'https://github.com/bondarkoff/react-vite-rent',
+        demo: '',
+        github: 'https://github.com/bondarkoff/DarkPortfolio',
+        type: 'Website',
         isReact: false,
     },
 ];

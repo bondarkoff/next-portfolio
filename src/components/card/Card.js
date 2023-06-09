@@ -4,7 +4,7 @@ import styles from './Card.module.scss';
 import { ReactIcon } from './ReactIcon';
 import { JavaScriptIcon } from './JavaScriptIcon';
 
-export const Card = ({ title, subtitle, stack, image, react, id }) => {
+export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
     return (
         <Link href={`/project/${id}`}>
             <div className={styles.card}>
@@ -32,7 +32,7 @@ export const Card = ({ title, subtitle, stack, image, react, id }) => {
                         )}
                     </div>
                     <div className='d-flex flex-col'>
-                        <div className={styles['card__footer-title']}>Website</div>
+                        <div className={styles['card__footer-title']}>{type}</div>
                         <div>
                             <ul className={styles['card__footer-wrapper']}>
                                 {stack.map((item, index) => (
