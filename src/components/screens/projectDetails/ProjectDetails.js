@@ -11,13 +11,16 @@ export default function ProjectDetails({ project }) {
                     <div className={styles.header}>
                         <div className={styles['header__text']}>
                             <h2 className={styles['header__text-title']}>{project.title}</h2>
-                            <p>{project.description}</p>
+                            <div className={styles['header__text-descr']}>
+                                <p className='mt-10'>{project.description}</p>
+                                <p className='mt-10'>{project.function}</p>
+                            </div>
                         </div>
                         <div className=''>
                             {project.isReact ? (
-                                <ReactIcon width={300} height={300} />
+                                <ReactIcon width={450} height={450} />
                             ) : (
-                                <JavaScriptIcon width={300} height={300} />
+                                <JavaScriptIcon width={450} height={450} />
                             )}
                         </div>
                     </div>
