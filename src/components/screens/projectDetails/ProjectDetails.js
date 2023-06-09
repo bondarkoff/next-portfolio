@@ -1,3 +1,6 @@
+import { ReactIcon } from '@/components/card/ReactIcon';
+import { JavaScriptIcon } from '@/components/card/JavaScriptIcon';
+
 import styles from './ProjectDetails.module.scss';
 
 export default function ProjectDetails({ project }) {
@@ -6,7 +9,17 @@ export default function ProjectDetails({ project }) {
             {project ? (
                 <div className='container'>
                     <div className={styles.header}>
-                        <h2 className={styles['header__title']}>{project.title}</h2>
+                        <div className={styles['header__text']}>
+                            <h2 className={styles['header__text-title']}>{project.title}</h2>
+                            <p>{project.description}</p>
+                        </div>
+                        <div className=''>
+                            {project.isReact ? (
+                                <ReactIcon width={300} height={300} />
+                            ) : (
+                                <JavaScriptIcon width={300} height={300} />
+                            )}
+                        </div>
                     </div>
                 </div>
             ) : (

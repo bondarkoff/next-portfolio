@@ -1,9 +1,9 @@
-export const ReactIcon = () => {
+export const ReactIcon = ({ height, width }) => {
     return (
         <svg
             fill='#000000'
-            width='28'
-            height='28'
+            width={width}
+            height={height}
             viewBox='0 0 30 30'
             xmlns='http://www.w3.org/2000/svg'>
             <g>

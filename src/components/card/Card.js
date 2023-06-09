@@ -25,7 +25,11 @@ export const Card = ({ title, subtitle, stack, image, react, id }) => {
                 </div>
                 <div className={styles['card__footer']}>
                     <div className={styles['card__footer-icon']}>
-                        {react ? <ReactIcon /> : <JavaScriptIcon />}
+                        {react ? (
+                            <ReactIcon width={28} height={28} />
+                        ) : (
+                            <JavaScriptIcon width={28} height={28} />
+                        )}
                     </div>
                     <div className='d-flex flex-col'>
                         <div className={styles['card__footer-title']}>Website</div>
