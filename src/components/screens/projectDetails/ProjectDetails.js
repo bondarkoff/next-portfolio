@@ -39,6 +39,24 @@ export default function ProjectDetails({ project }) {
                                 ) : (
                                     <div>Loading...</div>
                                 )}
+                                <div className='d-flex aic'>
+                                    {project.github ? (
+                                        <a
+                                            href={project.github}
+                                            className={styles['header__text-btn']}
+                                            target='_blank'>
+                                            Github
+                                        </a>
+                                    ) : null}
+                                    {project.demo ? (
+                                        <a
+                                            href={project.demo}
+                                            className={styles['header__text-btn']}
+                                            target='_blank'>
+                                            Demo
+                                        </a>
+                                    ) : null}
+                                </div>
                             </div>
                             <div>
                                 {project.isReact ? (

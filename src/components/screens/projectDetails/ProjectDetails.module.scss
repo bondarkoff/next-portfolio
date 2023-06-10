@@ -37,6 +37,36 @@
                 }
             }
         }
+        &-btn {
+            width: 150px;
+            height: 35px;
+            margin-top: 10px;
+            margin-right: 10px;
+            background-color: #aaaeb9;
+            border-radius: 6px;
+            color: #24292e;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            list-style: none;
+            padding: 6px 16px;
+            position: relative;
+            border: none;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
+                0px 8px 16px rgba(0, 0, 0, 0.6);
+            &:hover {
+                background-color: darken($color: #aaaeb9, $amount: 30);
+                text-decoration: none;
+                transition-duration: 0.1s;
+                color: lighten($color: #24292e, $amount: 75);
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
     }
     &__stack {
         display: flex;
