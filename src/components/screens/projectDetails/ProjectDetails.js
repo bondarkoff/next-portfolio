@@ -23,10 +23,30 @@ export default function ProjectDetails({ project }) {
                     <div className='container'>
                         <div className={styles.header}>
                             <div className={styles['header__text']}>
-                                <Link href='/' className={styles['header__text-link']}>
-                                    <ArrowIcon width={20} height={20} />
-                                    <p>Back to home</p>
-                                </Link>
+                                <div className='d-flex jcsb aic'>
+                                    <Link href='/' className={styles['header__text-link']}>
+                                        <ArrowIcon width={20} height={20} />
+                                        <p>Back to home</p>
+                                    </Link>
+                                    <div className='d-flex jcsb aic'>
+                                        {project.id <= 1 ? null : (
+                                            <Link
+                                                href={`/project/${parseInt(project.id) - 1}`}
+                                                className={styles['header__text-previous']}>
+                                                <ArrowIcon width={20} height={20} />
+                                                <p>To the previous project</p>
+                                            </Link>
+                                        )}
+                                        {project.id >= 4 ? null : (
+                                            <Link
+                                                href={`/project/${parseInt(project.id) + 1}`}
+                                                className={styles['header__text-next']}>
+                                                <p>To the next project</p>
+                                                <ArrowIcon width={20} height={20} />
+                                            </Link>
+                                        )}
+                                    </div>
+                                </div>
                                 <h2 className={styles['header__text-title']}>{project.title}</h2>
                                 <div className={styles['header__text-descr']}>
                                     <p className='mt-10'>{project.description}</p>

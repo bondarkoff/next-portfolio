@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     &__text {
+        height: 420px;
         width: 66%;
         &-title {
             font-weight: 600;
@@ -18,7 +19,10 @@
             line-height: 28px;
             color: rgba(255, 255, 255, 0.6);
         }
-        &-link {
+        &-link,
+        &-soloLink,
+        &-next,
+        &-previous {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -35,6 +39,17 @@
                 svg {
                     fill: #fff;
                 }
+            }
+        }
+        &-link {
+            margin-bottom: 10px;
+        }
+        &-next {
+            margin-left: 15px;
+            svg {
+                margin-left: 8px;
+                transform: scale(1, -1);
+                transition: all 0.2s ease-in-out;
             }
         }
         &-btn {

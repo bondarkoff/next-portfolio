@@ -15,6 +15,7 @@ export const Header = () => {
                             'Gamer.',
                             'Music Lover.',
                             'Self Learner.',
+                            'Web-Developer',
                             'Gym Goer.',
                             'Traveler.',
                         ]}

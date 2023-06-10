@@ -21,7 +21,9 @@ export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
                         height={355}
                         alt={title}
                         className={styles['card__header-image']}
-                        priority={true}
+                        priority
+                        placeholder='Cover Project Image'
+                        blurDataURL={image[0]}
                     />
                 </div>
                 <div className={styles['card__footer']}>
