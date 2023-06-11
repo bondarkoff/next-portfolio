@@ -66,6 +66,7 @@
         }
     }
     &__wrapper {
+        position: relative;
         display: grid;
         place-items: center;
         aspect-ratio: 1 / 1;
@@ -73,16 +74,23 @@
         border-radius: 2.5rem;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
             0px 8px 16px rgba(0, 0, 0, 0.6);
-        &-img {
+        &-first,
+        &-second {
+            z-index: 10;
             max-width: 500px;
             max-height: 500px;
             border-radius: 2rem;
             overflow: hidden;
             transform: rotate(8deg);
             transition: all 400ms ease;
+            opacity: 1;
             &:hover {
                 transform: rotate(0);
             }
+        }
+        &-second {
+            position: absolute;
+            z-index: 5;
         }
     }
 }

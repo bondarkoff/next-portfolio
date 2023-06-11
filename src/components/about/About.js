@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 
 import { GithubIcon } from '../assets/GithubIcon';
@@ -8,6 +9,16 @@ import { TelegramIcon } from '../assets/TelegramIcon';
 import styles from './About.module.scss';
 
 export default function About() {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
     return (
         <div className={styles.about}>
             <div className={styles['about__text']}>
@@ -52,9 +63,34 @@ export default function About() {
                 </div>
             </div>
 
-            <div className={styles['about__wrapper']}>
-                <div className={styles['about__wrapper-img']}>
-                    <Image src='/images/about-image.jpg' width={500} height={500} alt='Picture' />
+            <div
+                className={styles['about__wrapper']}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}>
+                <div
+                    className={`${styles['about__wrapper-first']} ${styles['image-container']}`}
+                    style={{ opacity: isHovered ? 0 : 1 }}>
+                    <Image
+                        src='/images/image-1.jpg'
+                        width={500}
+                        height={500}
+                        alt='Picture'
+                        className='image-1'
+                    />
+                </div>
+                <div
+                    className={`${styles['about__wrapper-second']} ${styles['image-container']}`}
+                    style={{
+                        opacity: isHovered ? 1 : 0,
+                        transform: isHovered ? 'rotate(0deg)' : 'rotate(8deg)',
+                    }}>
+                    <Image
+                        src='/images/image-2.jpg'
+                        width={500}
+                        height={500}
+                        alt='Picture'
+                        className='image-2'
+                    />
                 </div>
             </div>
         </div>
