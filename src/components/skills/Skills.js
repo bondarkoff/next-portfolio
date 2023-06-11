@@ -26,7 +26,7 @@ export default function Skills() {
                 <div
                     className={`${
                         hovered
-                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
                     onMouseEnter={() => handleCardHover(1)}
@@ -45,7 +45,7 @@ export default function Skills() {
                 <div
                     className={`${
                         hovered
-                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
                     onMouseEnter={() => handleCardHover(1)}
@@ -62,7 +62,7 @@ export default function Skills() {
                 <div
                     className={`${
                         hovered
-                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
                     onMouseEnter={() => handleCardHover(1)}
@@ -79,7 +79,7 @@ export default function Skills() {
                 <div
                     className={`${
                         hovered
-                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
                     onMouseEnter={() => handleCardHover(1)}
