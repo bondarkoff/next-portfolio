@@ -68,7 +68,7 @@ export default function About() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 <div
-                    className={`${styles['about__wrapper-first']} ${styles['image-container']}`}
+                    className={styles['about__wrapper-first']}
                     style={{ opacity: isHovered ? 0 : 1 }}>
                     <Image
                         src='/images/image-1.jpg'
@@ -79,7 +79,7 @@ export default function About() {
                     />
                 </div>
                 <div
-                    className={`${styles['about__wrapper-second']} ${styles['image-container']}`}
+                    className={styles['about__wrapper-second']}
                     style={{
                         opacity: isHovered ? 1 : 0,
                         transform: isHovered ? 'rotate(0deg)' : 'rotate(8deg)',

@@ -15,6 +15,7 @@
         grid-row-gap: 20px;
     }
     &__card {
+        opacity: 1;
         padding: 30px;
         border: 1px solid #aaaeb9;
         border-radius: 20px;
@@ -22,6 +23,7 @@
         height: 400px;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
             0px 8px 16px rgba(0, 0, 0, 0.6);
+        transition: transform 0.2s ease, opacity 0.2s ease;
         &-title {
             font-size: 24px;
         }
@@ -33,6 +35,21 @@
         }
         &-descr {
             margin-top: 15px;
+        }
+        &-notHovered {
+            opacity: 0.5;
+            padding: 30px;
+            border: 1px solid #aaaeb9;
+            border-radius: 20px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
+                0px 8px 16px rgba(0, 0, 0, 0.6);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+            }
         }
     }
 }

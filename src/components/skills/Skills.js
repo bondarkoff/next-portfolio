@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CSSIcon } from '../assets/CSSIcon';
 import { HTMLIcon } from '../assets/HTMLIcon';
 import { JavaScriptIcon } from '../assets/JavaScriptIcon';
@@ -6,11 +7,30 @@ import { ReactIcon } from '../assets/ReactIcon';
 import styles from './Skills.module.scss';
 
 export default function Skills() {
+    const [hovered, setHovered] = useState(false);
+
+    const handleCardHover = index => {
+        setHovered(index);
+    };
+
+    const handleCardLeave = () => {
+        setHovered(false);
+    };
+
+    console.log(hovered);
+
     return (
         <div className={styles.skills}>
             <h2 className={styles['skills__title']}>Skills</h2>
             <div className={styles['skills__wrapper']}>
-                <div className={styles['skills__card']}>
+                <div
+                    className={`${
+                        hovered
+                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            : styles['skills__card']
+                    }`}
+                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>HTML</h3>
                     <div className={styles['skills__card-img']}>
                         <HTMLIcon width={150} height={150} />
@@ -22,7 +42,14 @@ export default function Skills() {
                     </p>
                 </div>
 
-                <div className={styles['skills__card']}>
+                <div
+                    className={`${
+                        hovered
+                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            : styles['skills__card']
+                    }`}
+                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>CSS</h3>
                     <div className={styles['skills__card-img']}>
                         <CSSIcon width={150} height={150} />
@@ -32,7 +59,14 @@ export default function Skills() {
                         application. Everything is limited only by your imagination!
                     </p>
                 </div>
-                <div className={styles['skills__card']}>
+                <div
+                    className={`${
+                        hovered
+                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            : styles['skills__card']
+                    }`}
+                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>JavaScript</h3>
                     <div className={styles['skills__card-img']}>
                         <JavaScriptIcon width={150} height={150} />
@@ -42,7 +76,14 @@ export default function Skills() {
                         windows, tooltips, tabs, receiving data from the server, and much more.
                     </p>
                 </div>
-                <div className={styles['skills__card']}>
+                <div
+                    className={`${
+                        hovered
+                            ? (hovered === false && 'card') || styles['skills__card-notHovered']
+                            : styles['skills__card']
+                    }`}
+                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>React</h3>
                     <div className={styles['skills__card-img']}>
                         <ReactIcon width={150} height={150} />
