@@ -11,11 +11,13 @@ import { ArrowIcon } from '@/components/assets/ArrowIcon';
 import styles from './ProjectDetails.module.scss';
 
 export default function ProjectDetails({ project }) {
+    const { title, description, functionality, stack, images, id, github, demo, isReact } = project;
+
     return (
         <>
             <Head>
-                <title>{project.title}</title>
-                <meta name='description' content={project.description} />
+                <title>{title}</title>
+                <meta name='description' content={description} />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
             </Head>
             <div>
@@ -29,17 +31,17 @@ export default function ProjectDetails({ project }) {
                                         <p>Back to home</p>
                                     </Link>
                                     <div className='d-flex jcsb aic'>
-                                        {project.id <= 1 ? null : (
+                                        {id <= 1 ? null : (
                                             <Link
-                                                href={`/project/${parseInt(project.id) - 1}`}
+                                                href={`/project/${parseInt(id) - 1}`}
                                                 className={styles['header__text-previous']}>
                                                 <ArrowIcon width={20} height={20} />
                                                 <p>To the previous project</p>
                                             </Link>
                                         )}
-                                        {project.id >= 4 ? null : (
+                                        {id >= 4 ? null : (
                                             <Link
-                                                href={`/project/${parseInt(project.id) + 1}`}
+                                                href={`/project/${parseInt(id) + 1}`}
                                                 className={styles['header__text-next']}>
                                                 <p>To the next project</p>
                                                 <ArrowIcon width={20} height={20} />
@@ -47,30 +49,30 @@ export default function ProjectDetails({ project }) {
                                         )}
                                     </div>
                                 </div>
-                                <h2 className={styles['header__text-title']}>{project.title}</h2>
+                                <h2 className={styles['header__text-title']}>{title}</h2>
                                 <div className={styles['header__text-descr']}>
-                                    <p className='mt-10'>{project.description}</p>
-                                    <p className='mt-10'>{project.functionality}</p>
+                                    <p className='mt-10'>{description}</p>
+                                    <p className='mt-10'>{functionality}</p>
                                 </div>
-                                {project.stack ? (
+                                {stack ? (
                                     <div className='mt-3'>
-                                        <CardTags stack={project.stack} />
+                                        <CardTags stack={stack} />
                                     </div>
                                 ) : (
                                     <div>Loading...</div>
                                 )}
                                 <div className='d-flex aic'>
-                                    {project.github ? (
+                                    {github ? (
                                         <a
-                                            href={project.github}
+                                            href={github}
                                             className={styles['header__text-btn']}
                                             target='_blank'>
                                             Github
                                         </a>
                                     ) : null}
-                                    {project.demo ? (
+                                    {demo ? (
                                         <a
-                                            href={project.demo}
+                                            href={demo}
                                             className={styles['header__text-btn']}
                                             target='_blank'>
                                             Demo
@@ -79,7 +81,7 @@ export default function ProjectDetails({ project }) {
                                 </div>
                             </div>
                             <div>
-                                {project.isReact ? (
+                                {isReact ? (
                                     <ReactIcon width={450} height={450} />
                                 ) : (
                                     <JavaScriptIcon width={450} height={450} />
