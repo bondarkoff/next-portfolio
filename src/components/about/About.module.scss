@@ -1,5 +1,5 @@
 .about {
-    padding: 60px 0 120px 0;
+    padding: 60px 0px;
     display: flex;
     justify-content: space-between;
     &__text {
@@ -41,7 +41,6 @@
             &:hover {
                 background-color: darken($color: #aaaeb9, $amount: 30);
                 text-decoration: none;
-                transition-duration: 0.1s;
                 color: lighten($color: #24292e, $amount: 75);
             }
             &:last-child {
