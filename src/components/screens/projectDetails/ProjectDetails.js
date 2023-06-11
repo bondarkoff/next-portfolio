@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { CardTags } from '@/components/tags/Tags';
 import { ReactIcon } from '@/components/assets/ReactIcon';
@@ -8,7 +9,6 @@ import { Slider } from '@/components/slider/Slider';
 import { ArrowIcon } from '@/components/assets/ArrowIcon';
 
 import styles from './ProjectDetails.module.scss';
-import Link from 'next/link';
 
 export default function ProjectDetails({ project }) {
     return (

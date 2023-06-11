@@ -5,6 +5,7 @@ import { Projects } from '@/components/projects/Projects';
 import { Footer } from '@/components/ui/footer/Footer';
 import { Header } from '@/components/ui/header/Header';
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
+import About from '@/components/about/About';
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -29,6 +30,7 @@ export default function Home() {
                 <Header />
                 <main>
                     <Projects items={projects} />
+                    <About />
                 </main>
                 <Footer />
             </div>
