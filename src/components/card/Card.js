@@ -7,7 +7,7 @@ import { CardTags } from '../tags/Tags';
 
 export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
     return (
-        <Link href={`/project/${id}`}>
+        <Link href={`/project/${id}`} crossOrigin=''>
             <div className={styles.card}>
                 <div className={styles['card__header']}>
                     <div className={styles['card__header-blur']}></div>
