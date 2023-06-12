@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    height: 170px;
     width: 50px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%),
         rgba(0, 0, 0, 0.1);
@@ -12,7 +11,8 @@
     border-radius: 80px;
     margin: 40px;
     &__link,
-    &__active {
+    &__active,
+    &__social {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,12 +21,21 @@
         color: #fff;
         width: 48px;
         height: 48px;
+        transition: all 0.2s ease;
         &:active,
         &:focus,
         &:hover {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 32px;
         }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__divider {
+        margin: 0 auto;
+        width: 66%;
+        border-top: 2px solid #656a7b;
     }
     &__active {
         background: rgba(255, 255, 255, 0.1);

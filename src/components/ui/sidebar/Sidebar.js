@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Sidebar.module.scss';
+import { LinkedinIcon } from '@/components/assets/LinkedinIcon';
+import { GithubIcon } from '@/components/assets/GithubIcon';
 
 export const Sidebar = () => {
-    const [activeSection, setActiveSection] = useState(null);
+    const [activeSection, setActiveSection] = useState('projects');
     const sidebarRef = useRef(null);
 
     useEffect(() => {
@@ -83,6 +85,23 @@ export const Sidebar = () => {
                                     fill='#656A7B'
                                 />
                             </svg>
+                        </a>
+                    </li>
+                    <li className={styles['sidebar__divider']}></li>
+                    <li>
+                        <a
+                            href='https://www.linkedin.com/in/yehor-bondarkov/'
+                            className={styles['sidebar__social']}
+                            target='_blank'>
+                            <LinkedinIcon width={48} height={48} />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href='https://github.com/bondarkoff'
+                            className={styles['sidebar__social']}
+                            target='_blank'>
+                            <GithubIcon width={48} height={48} />
                         </a>
                     </li>
                 </ul>
