@@ -13,7 +13,7 @@ export default function ProjectPage() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get(`http://localhost:3000/api/projects`);
+                const response = await axios.get(`${window.location.origin}/api/projects`);
                 const foundProject = response.data.find(item => item.id === id);
                 setProject(foundProject);
             } catch (error) {
@@ -25,10 +25,10 @@ export default function ProjectPage() {
     }, [id]);
 
     useEffect(() => {
-        if (router.isReady) {
+        if (router.isReady && id) {
             setProject(id);
         }
-    }, [router.isReady]);
+    }, [router.isReady, id]);
 
     if (!project) return null;
 
