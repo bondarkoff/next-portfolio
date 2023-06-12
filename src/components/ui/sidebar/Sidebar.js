@@ -1,30 +1,61 @@
+import { useEffect, useRef, useState } from 'react';
 import styles from './Sidebar.module.scss';
 
 export const Sidebar = () => {
+    const [activeSection, setActiveSection] = useState(null);
+    const sidebarRef = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            const currentSection = Array.from(sections).find(section => {
+                const rect = section.getBoundingClientRect();
+                return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+            });
+
+            if (currentSection) {
+                setActiveSection(currentSection.id);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className={styles.sidebar}>
-            <nav>
+        <aside className={styles.sidebar} ref={sidebarRef}>
+            <nav className='d-flex jcc aic'>
                 <ul>
                     <li>
-                        <a className={styles['sidebar-link']} href='#'>
+                        <a
+                            className={`${styles['sidebar__link']} ${
+                                activeSection === 'projects' ? styles['sidebar__active'] : ''
+                            }`}
+                            href='#projects'>
                             <svg
-                                width='26'
+                                width='24'
                                 height='24'
-                                viewBox='0 0 26 24'
+                                viewBox='0 0 20 18'
                                 fill='none'
                                 xmlns='http://www.w3.org/2000/svg'>
                                 <path
-                                    d='M10.3303 21.7698V15.1032H15.6636V21.7698C15.6636 22.5032 16.2636 23.1032 16.997 23.1032H20.997C21.7303 23.1032 22.3303 22.5032 22.3303 21.7698V12.4365H24.597C25.2103 12.4365 25.5036 11.6765 25.037 11.2765L13.8903 1.23648C13.3836 0.783151 12.6103 0.783151 12.1036 1.23648L0.956957 11.2765C0.503624 11.6765 0.783623 12.4365 1.39696 12.4365H3.66362V21.7698C3.66362 22.5032 4.26362 23.1032 4.99696 23.1032H8.99696C9.73029 23.1032 10.3303 22.5032 10.3303 21.7698Z'
-                                    fill='#AAAEB9'
+                                    d='M7.99778 16.3274V11.3274H11.9978V16.3274C11.9978 16.8774 12.4478 17.3274 12.9978 17.3274H15.9978C16.5478 17.3274 16.9978 16.8774 16.9978 16.3274V9.32736H18.6978C19.1578 9.32736 19.3778 8.75736 19.0278 8.45736L10.6678 0.927363C10.2878 0.587363 9.70778 0.587363 9.32778 0.927363L0.967779 8.45736C0.627779 8.75736 0.837779 9.32736 1.29778 9.32736H2.99778V16.3274C2.99778 16.8774 3.44778 17.3274 3.99778 17.3274H6.99778C7.54778 17.3274 7.99778 16.8774 7.99778 16.3274Z'
+                                    fill='#656A7B'
                                 />
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a className={styles['sidebar-link']} href='#'>
+                        <a
+                            className={`${styles['sidebar__link']} ${
+                                activeSection === 'skills' ? styles['sidebar__active'] : ''
+                            }`}
+                            href='#skills'>
                             <svg
-                                width='16'
-                                height='16'
+                                width='24'
+                                height='24'
                                 viewBox='0 0 16 16'
                                 fill='none'
                                 xmlns='http://www.w3.org/2000/svg'>
@@ -36,10 +67,14 @@ export const Sidebar = () => {
                         </a>
                     </li>
                     <li>
-                        <a className={styles['sidebar-link']} href='#'>
+                        <a
+                            className={`${styles['sidebar__link']} ${
+                                activeSection === 'about' ? styles['sidebar__active'] : ''
+                            }`}
+                            href='#about'>
                             <svg
-                                width='20'
-                                height='20'
+                                width='24'
+                                height='24'
                                 viewBox='0 0 20 20'
                                 fill='none'
                                 xmlns='http://www.w3.org/2000/svg'>
@@ -50,27 +85,8 @@ export const Sidebar = () => {
                             </svg>
                         </a>
                     </li>
-                    <li>
-                        <a className={styles['sidebar-link']} href='#'>
-                            <svg
-                                width='20'
-                                height='18'
-                                viewBox='0 0 20 18'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'>
-                                <path
-                                    d='M10 13C11.6569 13 13 11.6569 13 10C13 8.34315 11.6569 7 10 7C8.34315 7 7 8.34315 7 10C7 11.6569 8.34315 13 10 13Z'
-                                    fill='#656A7B'
-                                />
-                                <path
-                                    d='M18 2H14.83L13.59 0.65C13.22 0.24 12.68 0 12.12 0H7.88C7.32 0 6.78 0.24 6.4 0.65L5.17 2H2C0.9 2 0 2.9 0 4V16C0 17.1 0.9 18 2 18H18C19.1 18 20 17.1 20 16V4C20 2.9 19.1 2 18 2ZM10 15C7.24 15 5 12.76 5 10C5 7.24 7.24 5 10 5C12.76 5 15 7.24 15 10C15 12.76 12.76 15 10 15Z'
-                                    fill='#656A7B'
-                                />
-                            </svg>
-                        </a>
-                    </li>
                 </ul>
             </nav>
-        </div>
+        </aside>
     );
 };

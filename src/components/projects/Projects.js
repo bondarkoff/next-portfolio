@@ -3,7 +3,7 @@ import styles from './Projects.module.scss';
 
 export const Projects = ({ items }) => {
     return (
-        <div className={styles.projects}>
+        <section className={styles.projects} id='projects'>
             <h2 className={styles['projects__title']}>Projects</h2>
             <div className={styles['projects__wrapper']}>
                 {items.map(item => (
@@ -22,6 +22,6 @@ export const Projects = ({ items }) => {
                     />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };

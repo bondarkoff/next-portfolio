@@ -17,10 +17,8 @@ export default function Skills() {
         setHovered(null);
     };
 
-    console.log(hovered);
-
     return (
-        <div className={styles.skills}>
+        <section className={styles.skills} id='skills'>
             <h2 className={styles['skills__title']}>Skills</h2>
             <div className={styles['skills__wrapper']}>
                 <div
@@ -134,6 +132,6 @@ export default function Skills() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

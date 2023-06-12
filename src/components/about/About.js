@@ -20,7 +20,7 @@ export default function About() {
     };
 
     return (
-        <div className={styles.about}>
+        <section className={styles.about} id='about'>
             <div className={styles['about__text']}>
                 <h2 className={styles['about__text-title']}>About me</h2>
                 <p className='mt-10'>
@@ -93,6 +93,6 @@ export default function About() {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
