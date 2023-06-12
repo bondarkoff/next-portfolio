@@ -129,9 +129,8 @@ export default function Skills() {
                         )}
                     </div>
                     <p className={styles['skills__card-descr']}>
-                        It is he who creates the framework of your site or application, and the
-                        fifth version will allow me to create a more SEO-optimized structure of your
-                        product
+                        React is a free and open-source front-end JavaScript library for building
+                        user interfaces based on UI components.
                     </p>
                 </div>
             </div>

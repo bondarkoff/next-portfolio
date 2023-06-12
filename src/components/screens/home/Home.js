@@ -36,8 +36,8 @@ export default function Home() {
                 <Header />
                 <main>
                     <Projects items={projects} />
-                    <About />
                     <Skills />
+                    <About />
                 </main>
                 <Footer />
             </div>
