@@ -82,9 +82,13 @@ export default function ProjectDetails({ project }) {
                             </div>
                             <div>
                                 {isReact ? (
-                                    <ReactIcon width={450} height={450} />
+                                    <ReactIcon width={450} height={450} firstPath={'#AAAEB9'} />
                                 ) : (
-                                    <JavaScriptIcon width={450} height={450} />
+                                    <JavaScriptIcon
+                                        width={450}
+                                        height={450}
+                                        firstPath={'#AAAEB9'}
+                                    />
                                 )}
                             </div>
                         </div>
