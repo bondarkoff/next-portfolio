@@ -32,9 +32,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            svg {
+                path {
+                    transition: all 0.2s ease;
+                }
+            }
         }
         &-descr {
-            margin-top: 15px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 400;
         }
         &-notHovered {
             opacity: 0.5;

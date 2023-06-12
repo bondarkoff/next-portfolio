@@ -7,14 +7,14 @@ import { ReactIcon } from '../assets/ReactIcon';
 import styles from './Skills.module.scss';
 
 export default function Skills() {
-    const [hovered, setHovered] = useState(false);
+    const [hovered, setHovered] = useState(null);
 
     const handleCardHover = index => {
         setHovered(index);
     };
 
     const handleCardLeave = () => {
-        setHovered(false);
+        setHovered(null);
     };
 
     console.log(hovered);
@@ -33,7 +33,23 @@ export default function Skills() {
                     onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>HTML</h3>
                     <div className={styles['skills__card-img']}>
-                        <HTMLIcon width={150} height={150} />
+                        {hovered === 1 ? (
+                            <HTMLIcon
+                                width={150}
+                                height={150}
+                                firstPath={'#E34F26'}
+                                secondPath={'#EF652A'}
+                                thirdPath={'#FFF'}
+                            />
+                        ) : (
+                            <HTMLIcon
+                                width={150}
+                                height={150}
+                                firstPath={'#AAAEB9'}
+                                secondPath={'#3333'}
+                                thirdPath={'#FFF'}
+                            />
+                        )}
                     </div>
                     <p className={styles['skills__card-descr']}>
                         It is he who creates the framework of your site or application, and the
@@ -48,11 +64,27 @@ export default function Skills() {
                             ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
-                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseEnter={() => handleCardHover(2)}
                     onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>CSS</h3>
                     <div className={styles['skills__card-img']}>
-                        <CSSIcon width={150} height={150} />
+                        {hovered === 2 ? (
+                            <CSSIcon
+                                width={150}
+                                height={150}
+                                firstPath={'#1B73BA'}
+                                secondPath={'#1C88C7'}
+                                thirdPath={'#FFF'}
+                            />
+                        ) : (
+                            <CSSIcon
+                                width={150}
+                                height={150}
+                                firstPath={'#AAAEB9'}
+                                secondPath={'#3333'}
+                                thirdPath={'#FFF'}
+                            />
+                        )}
                     </div>
                     <p className={styles['skills__card-descr']}>
                         This style language allows me to create absolutely any look for your site or
@@ -65,11 +97,15 @@ export default function Skills() {
                             ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
-                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseEnter={() => handleCardHover(3)}
                     onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>JavaScript</h3>
                     <div className={styles['skills__card-img']}>
-                        <JavaScriptIcon width={150} height={150} />
+                        {hovered === 3 ? (
+                            <JavaScriptIcon width={150} height={150} firstPath={'#FFD600'} />
+                        ) : (
+                            <JavaScriptIcon width={150} height={150} firstPath={'#AAAEB9'} />
+                        )}
                     </div>
                     <p className={styles['skills__card-descr']}>
                         This programming language allows you to bring anything to life: sliders,
@@ -82,11 +118,15 @@ export default function Skills() {
                             ? hovered === false || styles['skills__card-notHovered']
                             : styles['skills__card']
                     }`}
-                    onMouseEnter={() => handleCardHover(1)}
+                    onMouseEnter={() => handleCardHover(4)}
                     onMouseLeave={handleCardLeave}>
                     <h3 className={styles['skills__card-title']}>React</h3>
                     <div className={styles['skills__card-img']}>
-                        <ReactIcon width={150} height={150} />
+                        {hovered === 4 ? (
+                            <ReactIcon width={150} height={150} firstPath={'#61DAFB'} />
+                        ) : (
+                            <ReactIcon width={150} height={150} firstPath={'#AAAEB9'} />
+                        )}
                     </div>
                     <p className={styles['skills__card-descr']}>
                         It is he who creates the framework of your site or application, and the
