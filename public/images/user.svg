@@ -1,18 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Written by Treer (gitlab.com/Treer) -->
-<svg 
-	version="1.1" 
-	xmlns="http://www.w3.org/2000/svg" 
-	xmlns:xlink="http://www.w3.org/1999/xlink" 
-	width="600" 
-	height="600"
-	stroke="black"
-	stroke-width="30"
-	fill="none">
-
-  <title>Abstract user icon</title>
-	
-  <circle cx="300" cy="300" r="265" />
-  <circle cx="300" cy="230" r="115" />	
-  <path d="M106.81863443903,481.4 a205,205 1 0,1 386.36273112194,0" stroke-linecap="butt" />
+<svg xmlns="http://www.w3.org/2000/svg" width="86.956" height="91.25" viewBox="0 0 86.956 91.25">
+  <path id="User-Icon-0j3dsds" d="M127.937,133.686a25.433,25.433,0,1,0-19.533,0,43.466,43.466,0,0,0-33.711,42.336h86.956a43.466,43.466,0,0,0-33.711-42.336" transform="translate(-74.693 -84.772)"/>
 </svg>
