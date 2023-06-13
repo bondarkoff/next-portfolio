@@ -39,24 +39,28 @@ export default function About() {
                     <a
                         href='https://www.linkedin.com/in/yehor-bondarkov/'
                         target='_blank'
+                        aria-label='LinkedIn'
                         className={styles['about__text-contact']}>
                         <LinkedinIcon width={50} height={50} />
                     </a>
                     <a
                         href='https://github.com/bondarkoff'
                         target='_blank'
+                        aria-label='Github'
                         className={styles['about__text-contact']}>
                         <GithubIcon width={50} height={50} />
                     </a>
                     <a
                         href='https://t.me/bondarkoveg'
                         target='_blank'
+                        aria-label='Telegram'
                         className={styles['about__text-contact']}>
                         <TelegramIcon width={50} height={50} />
                     </a>
                     <a
                         href='mailto:yehor.bondarkoff@gmail.com'
                         target='_blank'
+                        aria-label='Mail'
                         className={styles['about__text-contact']}>
                         <GmailIcon width={50} height={50} />
                     </a>

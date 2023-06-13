@@ -35,7 +35,8 @@ export const Sidebar = () => {
                             className={`${styles['sidebar__link']} ${
                                 activeSection === 'projects' ? styles['sidebar__active'] : ''
                             }`}
-                            href='#projects'>
+                            href='#projects'
+                            aria-label='Projects Section'>
                             <svg
                                 width='24'
                                 height='24'
@@ -54,7 +55,8 @@ export const Sidebar = () => {
                             className={`${styles['sidebar__link']} ${
                                 activeSection === 'skills' ? styles['sidebar__active'] : ''
                             }`}
-                            href='#skills'>
+                            href='#skills'
+                            aria-label='Skills Section'>
                             <svg
                                 width='24'
                                 height='24'
@@ -73,7 +75,8 @@ export const Sidebar = () => {
                             className={`${styles['sidebar__link']} ${
                                 activeSection === 'about' ? styles['sidebar__active'] : ''
                             }`}
-                            href='#about'>
+                            href='#about'
+                            aria-label='About Section'>
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 width='24'
@@ -93,7 +96,8 @@ export const Sidebar = () => {
                         <a
                             href='https://www.linkedin.com/in/yehor-bondarkov/'
                             className={styles['sidebar__social']}
-                            target='_blank'>
+                            target='_blank'
+                            aria-label='LinkedIn'>
                             <LinkedinIcon width={48} height={48} />
                         </a>
                     </li>
@@ -101,7 +105,8 @@ export const Sidebar = () => {
                         <a
                             href='https://github.com/bondarkoff'
                             className={styles['sidebar__social']}
-                            target='_blank'>
+                            target='_blank'
+                            aria-label='Github'>
                             <GithubIcon width={48} height={48} />
                         </a>
                     </li>
