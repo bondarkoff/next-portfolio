@@ -7,6 +7,8 @@ import { Projects } from '@/components/projects/Projects';
 import { Footer } from '@/components/ui/footer/Footer';
 import { Header } from '@/components/ui/header/Header';
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
+import ContentLoader from 'react-content-loader';
+import { HomeContentLoader } from './HomeContentLoader';
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -33,7 +35,11 @@ export default function Home() {
             <div className='container'>
                 <Header loading={isLoading} />
                 <main>
-                    <Projects items={projects} isLoading={isLoading} />
+                    {isLoading ? (
+                        <HomeContentLoader />
+                    ) : (
+                        <Projects items={projects} loading={isLoading} />
+                    )}
                     <Skills />
                     <About />
                 </main>
