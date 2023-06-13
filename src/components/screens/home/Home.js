@@ -10,11 +10,14 @@ import { Sidebar } from '@/components/ui/sidebar/Sidebar';
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const itemsResponse = await axios.get('api/projects');
+
+                setIsLoading(false);
                 setProjects(itemsResponse.data);
             } catch (error) {
                 alert('Error while loading data. Details in console.');
@@ -28,9 +31,9 @@ export default function Home() {
         <>
             <Sidebar />
             <div className='container'>
-                <Header />
+                <Header loading={isLoading} />
                 <main>
-                    <Projects items={projects} />
+                    <Projects items={projects} isLoading={isLoading} />
                     <Skills />
                     <About />
                 </main>

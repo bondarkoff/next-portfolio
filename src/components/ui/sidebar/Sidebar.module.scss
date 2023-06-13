@@ -21,7 +21,7 @@
         color: #fff;
         width: 48px;
         height: 48px;
-        transition: all 0.2s ease;
+        transition: all 0.2s linear;
         &:active,
         &:hover {
             background: rgba(255, 255, 255, 0.1);
