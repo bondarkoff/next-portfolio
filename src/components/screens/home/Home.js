@@ -40,8 +40,8 @@ export default function Home() {
                     ) : (
                         <Projects items={projects} loading={isLoading} />
                     )}
-                    <Skills />
-                    <About />
+                    <Skills loading={isLoading} />
+                    <About loading={isLoading} />
                 </main>
                 <Footer />
             </div>
