@@ -43,7 +43,7 @@ export default function Home() {
                     <Skills loading={isLoading} />
                     <About loading={isLoading} />
                 </main>
-                <Footer />
+                <Footer loading={isLoading} />
             </div>
         </>
     );

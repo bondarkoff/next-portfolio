@@ -1,4 +1,4 @@
-export const Footer = () => {
+export const Footer = ({ loading = false }) => {
     return (
         <footer style={{ padding: '20px 0px 40px 0px' }}>
             <p
@@ -8,7 +8,7 @@ export const Footer = () => {
                     fontWeight: '200',
                     fontSize: '16px',
                 }}>
-                Created by Yehor Bondarkov
+                Created by {loading ? 'who?' : 'Yehor Bondarkov'}
             </p>
         </footer>
     );
