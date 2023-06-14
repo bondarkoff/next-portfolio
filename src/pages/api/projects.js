@@ -110,6 +110,7 @@ export const projects = [
             'React + hooks',
             'React Skeleton',
             'React Typed',
+            'React Swiper',
             'NextJS',
             'SCSS',
             'Axios',

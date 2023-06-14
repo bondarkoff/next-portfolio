@@ -17,6 +17,7 @@ export const Projects = ({ items }) => {
                         image={item.image}
                         github={item.github}
                         react={item.isReact}
+                        js={item.isJS}
                         id={item.id}
                         type={item.type}
                     />

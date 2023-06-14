@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Card.module.scss';
+
 import { ReactIcon } from '../assets/ReactIcon';
 import { JavaScriptIcon } from '../assets/JavaScriptIcon';
 import { CardTags } from '../tags/Tags';
+import { NPMIcon } from '../assets/NPMIcon';
 
-export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
+import styles from './Card.module.scss';
+
+export const Card = ({ title, subtitle, stack, image, react, id, type, js }) => {
+    console.log(title, react, js);
     return (
         <Link href={`/project/${id}`} crossOrigin=''>
             <div className={styles.card}>
@@ -30,8 +34,10 @@ export const Card = ({ title, subtitle, stack, image, react, id, type }) => {
                     <div className={styles['card__footer-icon']}>
                         {react ? (
                             <ReactIcon width={28} height={28} firstPath={'#AAAEB9'} />
-                        ) : (
+                        ) : js ? (
                             <JavaScriptIcon width={28} height={28} firstPath={'#AAAEB9'} />
+                        ) : (
+                            <NPMIcon width={28} height={28} firstPath={'#AAAEB9'} />
                         )}
                     </div>
                     <div className='d-flex flex-col'>
