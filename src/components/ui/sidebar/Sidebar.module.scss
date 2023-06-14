@@ -39,9 +39,9 @@
     &__active {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 32px;
-        transition: all 0.4s ease;
+        transition: all 0.4s linear;
         svg {
-            transition: all 0.4s ease;
+            transition: all 0.4s linear;
             transform: scale(1.2);
             path {
                 fill: #aaaeb9;

@@ -1,3 +1,4 @@
+import ContentLoader from 'react-content-loader';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -10,8 +11,8 @@ import { ArrowIcon } from '@/components/assets/ArrowIcon';
 
 import styles from './ProjectDetails.module.scss';
 
-export default function ProjectDetails({ project }) {
-    const { title, description, functionality, stack, images, id, github, demo, isReact } = project;
+export default function ProjectDetails({ project, loading = false }) {
+    const { title, description, functionality, stack, id, github, demo, isReact } = project;
 
     return (
         <>
@@ -49,48 +50,118 @@ export default function ProjectDetails({ project }) {
                                         )}
                                     </div>
                                 </div>
-                                <h2 className={styles['header__text-title']}>{title}</h2>
-                                <div className={styles['header__text-descr']}>
-                                    <p className='mt-10'>{description}</p>
-                                    <p className='mt-10'>{functionality}</p>
-                                </div>
+
+                                {loading ? (
+                                    <ContentLoader
+                                        speed={2}
+                                        width={950}
+                                        height={90}
+                                        viewBox='0 0 950 90'
+                                        backgroundColor='#333333'
+                                        foregroundColor='#aaaeb9'
+                                        uniqueKey='title'>
+                                        <rect x='0' y='0' rx='8' ry='8' width='950' height='90' />
+                                    </ContentLoader>
+                                ) : (
+                                    <h2 className={styles['header__text-title']}>{title}</h2>
+                                )}
+                                {loading ? (
+                                    <ContentLoader
+                                        speed={2}
+                                        width={950}
+                                        height={178}
+                                        viewBox='0 0 950 178'
+                                        backgroundColor='#333333'
+                                        foregroundColor='#aaaeb9'
+                                        className='mt-15'
+                                        uniqueKey='description'>
+                                        <rect x='0' y='0' rx='8' ry='8' width='950' height='178' />
+                                    </ContentLoader>
+                                ) : (
+                                    <div className={styles['header__text-descr']}>
+                                        <p className='mt-10'>{description}</p>
+                                        <p className='mt-10'>{functionality}</p>
+                                    </div>
+                                )}
                                 {stack ? (
                                     <div className='mt-3'>
                                         <CardTags stack={stack} />
                                     </div>
                                 ) : (
-                                    <div>Loading...</div>
+                                    <ContentLoader
+                                        speed={2}
+                                        width={950}
+                                        height={30}
+                                        viewBox='0 0 950 30'
+                                        backgroundColor='#333333'
+                                        foregroundColor='#aaaeb9'
+                                        className='mt-10'
+                                        uniqueKey='stack'>
+                                        <rect x='0' y='0' rx='8' ry='8' width='100' height='30' />
+                                        <rect x='110' y='0' rx='8' ry='8' width='100' height='30' />
+                                        <rect x='220' y='0' rx='8' ry='8' width='100' height='30' />
+                                        <rect x='330' y='0' rx='8' ry='8' width='100' height='30' />
+                                        <rect x='440' y='0' rx='8' ry='8' width='100' height='30' />
+                                    </ContentLoader>
                                 )}
-                                <div className='d-flex aic'>
-                                    {github ? (
-                                        <a
-                                            href={github}
-                                            className={styles['header__text-btn']}
-                                            target='_blank'>
-                                            Github
-                                        </a>
-                                    ) : null}
-                                    {demo ? (
-                                        <a
-                                            href={demo}
-                                            className={styles['header__text-btn']}
-                                            target='_blank'>
-                                            Demo
-                                        </a>
-                                    ) : null}
-                                </div>
-                            </div>
-                            <div>
-                                {isReact ? (
-                                    <ReactIcon width={450} height={450} firstPath={'#AAAEB9'} />
+                                {loading ? (
+                                    <ContentLoader
+                                        speed={2}
+                                        width={950}
+                                        height={40}
+                                        viewBox='0 0 950 40'
+                                        backgroundColor='#333333'
+                                        foregroundColor='#aaaeb9'
+                                        className='mt-5'
+                                        uniqueKey='buttons'>
+                                        <rect x='0' y='0' rx='6' ry='6' width='150' height='40' />
+                                        <rect x='160' y='0' rx='6' ry='6' width='150' height='40' />
+                                    </ContentLoader>
                                 ) : (
-                                    <JavaScriptIcon
-                                        width={450}
-                                        height={450}
-                                        firstPath={'#AAAEB9'}
-                                    />
+                                    <div className='d-flex aic'>
+                                        {github ? (
+                                            <a
+                                                href={github}
+                                                className={styles['header__text-btn']}
+                                                target='_blank'>
+                                                Github
+                                            </a>
+                                        ) : null}
+                                        {demo ? (
+                                            <a
+                                                href={demo}
+                                                className={styles['header__text-btn']}
+                                                target='_blank'>
+                                                Demo
+                                            </a>
+                                        ) : null}
+                                    </div>
                                 )}
                             </div>
+                            {loading ? (
+                                <ContentLoader
+                                    speed={2}
+                                    width={450}
+                                    height={450}
+                                    viewBox='0 0 450 450'
+                                    backgroundColor='#333333'
+                                    foregroundColor='#aaaeb9'
+                                    uniqueKey='image'>
+                                    <rect x='0' y='0' rx='100' ry='100' width='450' height='450' />
+                                </ContentLoader>
+                            ) : (
+                                <div>
+                                    {isReact ? (
+                                        <ReactIcon width={450} height={450} firstPath={'#AAAEB9'} />
+                                    ) : (
+                                        <JavaScriptIcon
+                                            width={450}
+                                            height={450}
+                                            firstPath={'#AAAEB9'}
+                                        />
+                                    )}
+                                </div>
+                            )}
                         </div>
                         <Slider project={project} />
                     </div>

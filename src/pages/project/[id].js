@@ -6,6 +6,7 @@ import ProjectDetails from '@/components/screens/projectDetails/ProjectDetails';
 
 export default function ProjectPage() {
     const [project, setProject] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const router = useRouter();
     const { id } = router.query;
@@ -15,6 +16,7 @@ export default function ProjectPage() {
             try {
                 const response = await axios.get(`${window.location.origin}/api/projects`);
                 const foundProject = response.data.find(item => item.id === id);
+                setIsLoading(false);
                 setProject(foundProject);
             } catch (error) {
                 alert('Error while fetching project details. Check console for details.');
@@ -32,5 +34,5 @@ export default function ProjectPage() {
 
     if (!project) return null;
 
-    return <ProjectDetails project={project} />;
+    return <ProjectDetails project={project} loading={isLoading} />;
 }
