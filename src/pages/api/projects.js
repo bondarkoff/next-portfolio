@@ -12,7 +12,6 @@ export const projects = [
             'React Router',
             'React Helmet',
             'React Skeleton',
-            'React Context',
             'SCSS',
             'Axios',
             'css-shortcut',
@@ -25,8 +24,9 @@ export const projects = [
         ],
         demo: 'https://react-vite-rent.vercel.app/cars',
         github: 'https://github.com/bondarkoff/react-vite-rent',
-        isReact: true,
         type: 'Web Application',
+        isReact: true,
+        isJS: false,
     },
     {
         id: '2',
@@ -54,6 +54,7 @@ export const projects = [
         github: 'https://github.com/bondarkoff/react-marvel',
         type: 'Web Application',
         isReact: true,
+        isJS: false,
     },
     {
         id: '3',
@@ -63,15 +64,7 @@ export const projects = [
             'A web application that showcases and sells sneakers. The homepage displays a collection of sneakers in a grid format, allowing users to easily browse through the available options.',
         functionality:
             'Users can view the collection of sneakers and explore detailed information about each pair, including product images and pricing. Additionally, users can add sneakers to their cart and proceed to a checkout page to complete their purchase. Deployed on Vercel and Netlify.',
-        stack: [
-            'React + hooks',
-            'React Router',
-            'React Context',
-            'React Skeleton',
-            'Axios',
-            'SCSS',
-            'Macro-css',
-        ],
+        stack: ['React + hooks', 'React Router', 'React Skeleton', 'Axios', 'SCSS', 'Macro-css'],
         image: [
             '/images/projects/project-3/cover-1.png',
             '/images/projects/project-3/cover-2.png',
@@ -82,6 +75,7 @@ export const projects = [
         github: 'https://github.com/bondarkoff/react-sneakers',
         type: 'Web Application',
         isReact: true,
+        isJS: false,
     },
     {
         id: '4',
@@ -102,6 +96,46 @@ export const projects = [
         github: 'https://github.com/bondarkoff/DarkPortfolio',
         type: 'Website',
         isReact: false,
+        isJS: true,
+    },
+    {
+        id: '5',
+        title: 'This One :)',
+        subtitle: 'My own portfolio',
+        description:
+            'My own personal website showcasing my portfolio and works. The website design aims for clarity and ease of use, with a focus on visually representing my works.',
+        functionality:
+            'The website provides the ability to view my portfolio and browse through my projects. The "Projects" section presents my works with descriptions of each project and corresponding images. Contact information is also provided, allowing users to reach out to me for inquiries or questions. Develop by NextJS 13 and deployed on Vercel.',
+        stack: [
+            'React + hooks',
+            'React Skeleton',
+            'React Typed',
+            'NextJS',
+            'SCSS',
+            'Axios',
+            'css-shortcut',
+        ],
+        image: ['/images/projects/project-5/cover-1.png'],
+        demo: '',
+        github: 'https://github.com/bondarkoff/next-portfolio',
+        type: 'Web Application',
+        isReact: true,
+        isJS: false,
+    },
+    {
+        id: '6',
+        title: 'css-shortcut',
+        subtitle: 'My own npm package',
+        description:
+            '"css-shortcut" is an npm package that provides an easy way to shorten CSS properties. It allows developers to reduce the size of CSS code by using shorter and simpler shortcuts for properties such as font weight, margins, and colors.',
+        functionality: '',
+        stack: ['SCSS', 'Gulp'],
+        image: ['/images/projects/project-6/cover-1.png', '/images/projects/project-6/cover-2.png'],
+        demo: 'https://www.npmjs.com/package/css-shortcut',
+        github: 'https://github.com/bondarkoff/css-shortcut',
+        type: 'NPM Package',
+        isReact: false,
+        isJS: false,
     },
 ];
 

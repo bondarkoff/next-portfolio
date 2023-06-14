@@ -1,4 +1,4 @@
-export const ReactIcon = ({ height, width, firstPath, secondPath }) => {
+export const ReactIcon = ({ height, width, firstPath }) => {
     return (
         <svg
             fill='#000000'

@@ -10,9 +10,10 @@ import { Slider } from '@/components/slider/Slider';
 import { ArrowIcon } from '@/components/assets/ArrowIcon';
 
 import styles from './ProjectDetails.module.scss';
+import { NPMIcon } from '@/components/assets/NPMIcon';
 
 export default function ProjectDetails({ project, loading = false }) {
-    const { title, description, functionality, stack, id, github, demo, isReact } = project;
+    const { title, description, functionality, stack, id, github, demo, isReact, isJS } = project;
 
     return (
         <>
@@ -40,7 +41,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                                 <p>To the previous project</p>
                                             </Link>
                                         )}
-                                        {id >= 4 ? null : (
+                                        {id >= 6 ? null : (
                                             <Link
                                                 href={`/project/${parseInt(id) + 1}`}
                                                 className={styles['header__text-next']}>
@@ -153,12 +154,14 @@ export default function ProjectDetails({ project, loading = false }) {
                                 <div>
                                     {isReact ? (
                                         <ReactIcon width={450} height={450} firstPath={'#AAAEB9'} />
-                                    ) : (
+                                    ) : isJS ? (
                                         <JavaScriptIcon
                                             width={450}
                                             height={450}
                                             firstPath={'#AAAEB9'}
                                         />
+                                    ) : (
+                                        <NPMIcon width={450} height={450} firstPath={'#AAAEB9'} />
                                     )}
                                 </div>
                             )}
