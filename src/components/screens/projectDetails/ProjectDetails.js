@@ -163,7 +163,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                 </div>
                             )}
                         </div>
-                        <Slider project={project} />
+                        <Slider project={project} loading={loading} />
                     </div>
                 ) : (
                     <div>Loading...</div>

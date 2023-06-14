@@ -1,3 +1,4 @@
+import ContentLoader from 'react-content-loader';
 import Image from 'next/image';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,7 +7,7 @@ import styles from './Slider.module.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export const Slider = ({ project }) => {
+export const Slider = ({ project, loading = false }) => {
     return (
         <>
             {project.image ? (
@@ -77,7 +78,16 @@ export const Slider = ({ project }) => {
                     </div>
                 </div>
             ) : (
-                <div>Loading...</div>
+                <ContentLoader
+                    speed={2}
+                    width={1440}
+                    height={873}
+                    viewBox='0 0 1440 873'
+                    backgroundColor='#333333'
+                    foregroundColor='#aaaeb9'>
+                    <rect x='0' y='0' rx='8' ry='8' width='950' height='48' />
+                    <rect x='20' y='75' rx='6' ry='6' width='1300' height='660' />
+                </ContentLoader>
             )}
         </>
     );
