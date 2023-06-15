@@ -9,7 +9,6 @@ import { NPMIcon } from '../assets/NPMIcon';
 import styles from './Card.module.scss';
 
 export const Card = ({ title, subtitle, stack, image, react, id, type, js }) => {
-    console.log(title, react, js);
     return (
         <Link href={`/project/${id}`} crossOrigin=''>
             <div className={styles.card}>
