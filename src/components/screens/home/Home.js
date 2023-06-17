@@ -39,8 +39,8 @@ export default function Home() {
                     ) : (
                         <Projects items={projects} loading={isLoading} />
                     )}
-                    <Skills loading={isLoading} />
-                    <About loading={isLoading} />
+                    {/* <Skills loading={isLoading} />
+                    <About loading={isLoading} /> */}
                 </main>
                 <Footer loading={isLoading} />
             </div>

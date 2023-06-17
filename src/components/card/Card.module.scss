@@ -118,3 +118,62 @@
         }
     }
 }
+
+@media (max-width: 1440px) {
+    .card {
+        width: 590px;
+        height: 470px;
+        &__header {
+            height: 345px;
+            &-image {
+                width: 590px;
+                height: 345px;
+            }
+        }
+        &__footer {
+            height: 125px;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .card {
+        width: 545px;
+        height: 450px;
+        &__header {
+            height: 335px;
+            &-image {
+                width: 545px;
+                height: 335px;
+            }
+            &-title {
+                font-size: 52px;
+                line-height: 105%;
+            }
+        }
+        &__footer {
+            height: 115px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .card {
+        width: 750px;
+        height: 470px;
+        &__header {
+            height: 355px;
+            &-image {
+                width: 750px;
+                height: 355px;
+            }
+            &-title {
+                font-size: 52px;
+                line-height: 105%;
+            }
+        }
+        &__footer {
+            height: 115px;
+        }
+    }
+}

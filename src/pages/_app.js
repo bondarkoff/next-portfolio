@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 
 import 'css-shortcut';
 
-import '@/styles/globals.scss';
+import '@/styles/global.scss';
 
 const inter = Inter({ weight: ['200', '400', '500', '700', '800', '900'], subsets: ['latin'] });
 

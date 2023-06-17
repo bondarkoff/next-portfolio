@@ -19,3 +19,14 @@
         }
     }
 }
+
+@media (max-width: 1240px) {
+    .tags {
+        &__item {
+            margin: 6px 6px 0px 0px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+}

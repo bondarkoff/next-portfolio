@@ -14,3 +14,33 @@
         grid-row-gap: 60px;
     }
 }
+
+@media (max-width: 1440px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(2, 590px);
+            grid-template-rows: repeat(2, 470px);
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(2, 545px);
+            grid-template-rows: repeat(2, 450px);
+            grid-column-gap: 45px;
+            grid-row-gap: 45px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 750px);
+            grid-template-rows: repeat(6, 470px);
+            justify-content: center;
+        }
+    }
+}
