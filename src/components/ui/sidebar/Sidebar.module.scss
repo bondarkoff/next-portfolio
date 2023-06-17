@@ -1,8 +1,8 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    left: 0;
     position: fixed;
-    width: 50px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%),
         rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04), 0px 2px 3px rgba(0, 0, 0, 0.12),
@@ -53,6 +53,66 @@
         margin-top: 12px;
         &:first-child {
             margin-top: 0px;
+        }
+    }
+}
+
+@media (max-width: 1660px) {
+    .sidebar {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 1560px) {
+    .sidebar {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .sidebar {
+        margin: 20px;
+        &__link,
+        &__active,
+        &__social {
+            width: 38px;
+            height: 38px;
+        }
+        &__divider {
+            width: 50%;
+        }
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        margin: 20px 15px;
+        &__link,
+        &__active,
+        &__social {
+            width: 36px;
+            height: 36px;
+        }
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        margin: 20px 15px;
+        &__link,
+        &__active,
+        &__social {
+            width: 36px;
+            height: 36px;
+        }
+        li {
+            margin-top: 10px;
         }
     }
 }

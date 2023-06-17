@@ -7,7 +7,6 @@ import { Projects } from '@/components/projects/Projects';
 import { Footer } from '@/components/ui/footer/Footer';
 import { Header } from '@/components/ui/header/Header';
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
-import ContentLoader from 'react-content-loader';
 import { HomeContentLoader } from './HomeContentLoader';
 
 export default function Home() {
@@ -34,7 +33,7 @@ export default function Home() {
             <Sidebar />
             <div className='container'>
                 <Header loading={isLoading} />
-                <main>
+                {/* <main>
                     {isLoading ? (
                         <HomeContentLoader />
                     ) : (
@@ -42,7 +41,7 @@ export default function Home() {
                     )}
                     <Skills loading={isLoading} />
                     <About loading={isLoading} />
-                </main>
+                </main> */}
                 <Footer loading={isLoading} />
             </div>
         </>

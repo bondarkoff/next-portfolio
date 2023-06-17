@@ -8,11 +8,15 @@
         &-title,
         &-typed {
             font-weight: 600;
-            font-size: 60px;
+            font-size: 52px;
             line-height: 150%;
             margin-right: 10px;
+            position: relative;
+            right: -60px;
         }
         &-quote {
+            position: relative;
+            right: -60px;
             font-weight: 200;
             font-size: 36px;
             line-height: 150%;
@@ -31,5 +35,95 @@
         height: 33%;
         bottom: 0;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #15161a 75%);
+    }
+    &__image {
+        &-wrapper {
+            position: relative;
+        }
+        &-loader {
+            padding-top: 20px;
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .header__text-typed {
+        font-size: 52px;
+    }
+    .header__text-title-loader {
+        position: relative;
+        right: -60px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 1240px) {
+    .header__text-typed {
+        font-size: 42px;
+    }
+    .header__text-quote {
+        font-size: 32px;
+    }
+    .header__text-title-loader {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1140px) {
+    .header {
+        &__text {
+            &-title {
+                font-size: 46px;
+                &-loader {
+                    width: 80%;
+                }
+            }
+            &-typed {
+                font-size: 36px;
+                line-height: 120%;
+            }
+            &-quote {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &__text {
+            position: relative;
+            z-index: 5;
+            &-title {
+                font-size: 46px;
+                &-loader {
+                    width: 85%;
+                }
+            }
+            &-typed {
+                font-size: 40px;
+                line-height: 120%;
+                text-shadow: 6px 6px 6px #3333;
+            }
+            &-quote {
+                width: 60%;
+                font-size: 30px;
+            }
+        }
+        &__image {
+            height: 330px;
+            width: 330px;
+            &-wrapper {
+                position: absolute;
+                right: 0;
+                z-index: 0;
+            }
+            &-loader {
+                margin-left: 0px;
+                width: 40%;
+                height: 40%;
+            }
+        }
     }
 }

@@ -16,7 +16,8 @@ export const Header = ({ loading = false }) => {
                         viewBox='0 0 1100 100'
                         backgroundColor='#333333'
                         foregroundColor='#aaaeb9'
-                        uniqueKey='header-title'>
+                        uniqueKey='header__title'
+                        className={styles['header__text-title-loader']}>
                         <rect x='0' y='0' rx='9' ry='9' width='1100' height='100' />
                     </ContentLoader>
                 ) : (
@@ -61,12 +62,12 @@ export const Header = ({ loading = false }) => {
                     viewBox='0 0 300 300'
                     backgroundColor='#333333'
                     foregroundColor='#aaaeb9'
-                    className='ml-20 pt-20'
+                    className={styles['header__image-loader']}
                     uniqueKey='header-image'>
                     <rect x='0' y='0' rx='50' ry='50' width='300' height='300' />
                 </ContentLoader>
             ) : (
-                <div className='pos-r'>
+                <div className={styles['header__image-wrapper']}>
                     <Image
                         src={'/images/sticker.webp'}
                         alt='Avatar Image'
