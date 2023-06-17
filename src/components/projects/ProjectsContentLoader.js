@@ -1,17 +1,9 @@
 import ContentLoader from 'react-content-loader';
+import styles from './Projects.module.scss';
 
-export const HomeContentLoader = () => {
+export const ProjectsContentLoader = () => {
     return (
-        <div
-            style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 690px)',
-                gridAutoRows: 'repeat(2, 480px)',
-                gridColumGap: '60px',
-                gridRowGap: '60px',
-                justifyContent: 'center',
-                paddingTop: '120px',
-            }}>
+        <div className={styles['projects__wrapper']}>
             <ContentLoader
                 speed={2}
                 width={690}
@@ -19,8 +11,8 @@ export const HomeContentLoader = () => {
                 viewBox='0 0 690 480'
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
-                className='pr-50'
-                uniqueKey='1'>
+                uniqueKey='1'
+                className='projects__loader'>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -30,8 +22,8 @@ export const HomeContentLoader = () => {
                 viewBox='0 0 690 480'
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
-                className='pr-50'
-                uniqueKey='2'>
+                uniqueKey='2'
+                className='projects__loader'>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -41,8 +33,8 @@ export const HomeContentLoader = () => {
                 viewBox='0 0 690 480'
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
-                className='pr-50'
-                uniqueKey='3'>
+                uniqueKey='3'
+                className='projects__loader'>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -52,8 +44,8 @@ export const HomeContentLoader = () => {
                 viewBox='0 0 690 480'
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
-                className='pr-50'
-                uniqueKey='4'>
+                uniqueKey='4'
+                className='projects__loader'>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
         </div>

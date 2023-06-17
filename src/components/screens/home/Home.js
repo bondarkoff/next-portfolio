@@ -7,7 +7,6 @@ import { Projects } from '@/components/projects/Projects';
 import { Footer } from '@/components/ui/footer/Footer';
 import { Header } from '@/components/ui/header/Header';
 import { Sidebar } from '@/components/ui/sidebar/Sidebar';
-import { HomeContentLoader } from './HomeContentLoader';
 
 export default function Home() {
     const [projects, setProjects] = useState([]);
@@ -16,10 +15,12 @@ export default function Home() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const itemsResponse = await axios.get('api/projects');
+                setTimeout(async () => {
+                    const itemsResponse = await axios.get('api/projects');
 
-                setIsLoading(false);
-                setProjects(itemsResponse.data);
+                    setIsLoading(false);
+                    setProjects(itemsResponse.data);
+                }, 1000000000);
             } catch (error) {
                 alert('Error while loading data. Details in console.');
                 console.log(error);
@@ -34,11 +35,7 @@ export default function Home() {
             <div className='container'>
                 <Header loading={isLoading} />
                 <main>
-                    {isLoading ? (
-                        <HomeContentLoader />
-                    ) : (
-                        <Projects items={projects} loading={isLoading} />
-                    )}
+                    <Projects items={projects} loading={isLoading} />
                     {/* <Skills loading={isLoading} />
                     <About loading={isLoading} /> */}
                 </main>
