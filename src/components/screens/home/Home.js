@@ -30,10 +30,10 @@ export default function Home() {
 
     return (
         <>
-            <Sidebar />
+            {/* <Sidebar /> */}
             <div className='container'>
                 <Header loading={isLoading} />
-                {/* <main>
+                <main>
                     {isLoading ? (
                         <HomeContentLoader />
                     ) : (
@@ -41,7 +41,7 @@ export default function Home() {
                     )}
                     <Skills loading={isLoading} />
                     <About loading={isLoading} />
-                </main> */}
+                </main>
                 <Footer loading={isLoading} />
             </div>
         </>
