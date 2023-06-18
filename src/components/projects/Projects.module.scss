@@ -12,9 +12,11 @@
         grid-template-rows: repeat(2, 480px);
         grid-column-gap: 60px;
         grid-row-gap: 60px;
+    }
+    &__loader {
         svg {
-            width: 690px;
-            height: 480px;
+            width: 590px;
+            height: 470px;
         }
     }
 }
@@ -24,6 +26,8 @@
         &__wrapper {
             grid-template-columns: repeat(2, 590px);
             grid-template-rows: repeat(2, 470px);
+        }
+        &__loader {
             svg {
                 width: 590px;
                 height: 470px;
@@ -39,9 +43,11 @@
             grid-template-rows: repeat(2, 450px);
             grid-column-gap: 45px;
             grid-row-gap: 45px;
+        }
+        &__loader {
             svg {
-                width: 545px;
-                height: 450px;
+                width: 590px;
+                height: 470px;
             }
         }
     }
@@ -53,8 +59,10 @@
             grid-template-columns: repeat(1, 750px);
             grid-template-rows: repeat(6, 470px);
             justify-content: center;
+        }
+        &__loader {
             svg {
-                width: 750px;
+                width: 590px;
                 height: 470px;
             }
         }
