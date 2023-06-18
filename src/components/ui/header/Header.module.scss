@@ -45,7 +45,7 @@
 
 @media (max-width: 1440px) {
     .header__text-typed {
-        font-size: 52px;
+        font-size: 46px;
     }
     .header__text-title-loader {
         position: relative;
@@ -55,7 +55,10 @@
 
 @media (max-width: 1240px) {
     .header__text-typed {
-        font-size: 42px;
+        font-size: 38px;
+    }
+    .header__text-title {
+        font-size: 50px;
     }
     .header__text-quote {
         font-size: 32px;
@@ -69,7 +72,7 @@
     .header {
         &__text {
             &-title {
-                font-size: 46px;
+                font-size: 44px;
                 &-loader {
                     width: 80%;
                 }
@@ -81,6 +84,10 @@
             &-quote {
                 font-size: 32px;
             }
+        }
+        &__image {
+            width: 300px;
+            height: 300px;
         }
     }
 }

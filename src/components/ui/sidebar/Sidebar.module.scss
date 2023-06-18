@@ -65,18 +65,22 @@
 
 @media (max-width: 1560px) {
     .sidebar {
-        margin: 10px;
+        margin: 0px;
+        margin-left: 5px;
+        margin-top: 15px;
     }
 }
 
 @media (max-width: 1240px) {
     .sidebar {
-        margin: 20px;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 20px;
         &__link,
         &__active,
         &__social {
-            width: 38px;
-            height: 38px;
+            width: 42px;
+            height: 42px;
         }
         &__divider {
             width: 50%;
@@ -89,27 +93,14 @@
 
 @media (max-width: 1024px) {
     .sidebar {
-        margin: 20px 15px;
+        margin: 0;
+        margin-left: 10px;
+        margin-top: 20px;
         &__link,
         &__active,
         &__social {
-            width: 36px;
-            height: 36px;
-        }
-        li {
-            margin-top: 10px;
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    .sidebar {
-        margin: 20px 15px;
-        &__link,
-        &__active,
-        &__social {
-            width: 36px;
-            height: 36px;
+            width: 42px;
+            height: 42px;
         }
         li {
             margin-top: 10px;

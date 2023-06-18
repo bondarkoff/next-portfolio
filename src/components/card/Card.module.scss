@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    width: 690px;
+    width: 630px;
     height: 480px;
     background: radial-gradient(
         100% 100% at 50% 0%,
@@ -121,12 +121,12 @@
 
 @media (max-width: 1440px) {
     .card {
-        width: 590px;
+        width: 550px;
         height: 470px;
         &__header {
             height: 345px;
             &-image {
-                width: 590px;
+                width: 550px;
                 height: 345px;
             }
         }
@@ -138,12 +138,12 @@
 
 @media (max-width: 1240px) {
     .card {
-        width: 545px;
+        width: 510px;
         height: 450px;
         &__header {
             height: 335px;
             &-image {
-                width: 545px;
+                width: 510px;
                 height: 335px;
             }
             &-title {

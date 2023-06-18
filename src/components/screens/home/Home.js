@@ -16,7 +16,6 @@ export default function Home() {
         async function fetchData() {
             try {
                 const itemsResponse = await axios.get('api/projects');
-
                 setIsLoading(false);
                 setProjects(itemsResponse.data);
             } catch (error) {
@@ -29,7 +28,7 @@ export default function Home() {
 
     return (
         <>
-            {/* <Sidebar /> */}
+            <Sidebar />
             <div className='container'>
                 <Header loading={isLoading} />
                 <main>

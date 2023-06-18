@@ -8,10 +8,11 @@
     &__wrapper {
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(2, 690px);
+        grid-template-columns: repeat(2, 630px);
         grid-template-rows: repeat(2, 480px);
         grid-column-gap: 60px;
         grid-row-gap: 60px;
+        justify-content: center;
     }
     &__loader {
         svg {
@@ -24,12 +25,12 @@
 @media (max-width: 1440px) {
     .projects {
         &__wrapper {
-            grid-template-columns: repeat(2, 590px);
+            grid-template-columns: repeat(2, 550px);
             grid-template-rows: repeat(2, 470px);
         }
         &__loader {
             svg {
-                width: 590px;
+                width: 550px;
                 height: 470px;
             }
         }
@@ -39,7 +40,7 @@
 @media (max-width: 1240px) {
     .projects {
         &__wrapper {
-            grid-template-columns: repeat(2, 545px);
+            grid-template-columns: repeat(2, 510px);
             grid-template-rows: repeat(2, 450px);
             grid-column-gap: 45px;
             grid-row-gap: 45px;

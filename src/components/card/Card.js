@@ -20,7 +20,7 @@ export const Card = ({ title, subtitle, stack, image, react, id, type, js }) => 
                     </div>
                     <Image
                         src={image[0]}
-                        width={693}
+                        width={630}
                         height={355}
                         alt={title}
                         className={styles['card__header-image']}
