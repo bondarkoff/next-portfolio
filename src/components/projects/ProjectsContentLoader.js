@@ -12,7 +12,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='1'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -23,7 +23,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='2'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -34,7 +34,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='3'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -45,7 +45,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='4'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -56,7 +56,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='4'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
             <ContentLoader
@@ -67,7 +67,7 @@ export const ProjectsContentLoader = () => {
                 backgroundColor='#333333'
                 foregroundColor='#aaaeb9'
                 uniqueKey='4'
-                className='projects__loader'>
+                className={styles['projects__loader']}>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
         </div>

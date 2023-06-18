@@ -15,9 +15,11 @@ export default function Home() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const itemsResponse = await axios.get('api/projects');
-                setIsLoading(false);
-                setProjects(itemsResponse.data);
+                setTimeout(async () => {
+                    const itemsResponse = await axios.get('api/projects');
+                    setIsLoading(false);
+                    setProjects(itemsResponse.data);
+                }, 150000);
             } catch (error) {
                 alert('Error while loading data. Details in console.');
                 console.log(error);

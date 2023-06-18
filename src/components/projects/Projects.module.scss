@@ -15,10 +15,8 @@
         justify-content: center;
     }
     &__loader {
-        svg {
-            width: 590px;
-            height: 470px;
-        }
+        width: 630px;
+        height: 480px;
     }
 }
 
@@ -29,10 +27,8 @@
             grid-template-rows: repeat(2, 470px);
         }
         &__loader {
-            svg {
-                width: 550px;
-                height: 470px;
-            }
+            width: 550px;
+            height: 490px;
         }
     }
 }
@@ -46,10 +42,8 @@
             grid-row-gap: 45px;
         }
         &__loader {
-            svg {
-                width: 590px;
-                height: 470px;
-            }
+            width: 510px;
+            height: 450px;
         }
     }
 }
@@ -62,10 +56,8 @@
             justify-content: center;
         }
         &__loader {
-            svg {
-                width: 590px;
-                height: 470px;
-            }
+            width: 645px;
+            height: 490px;
         }
     }
 }

@@ -43,6 +43,8 @@ a {
 
 @media (max-width: 1024px) {
     .container {
+        margin: 0 auto;
+        padding: 0 10px;
         width: 900px;
     }
     footer {
