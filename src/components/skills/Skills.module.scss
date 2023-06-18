@@ -108,11 +108,11 @@
 @media (max-width: 1140px) {
     .skills {
         &__wrapper {
-            grid-template-columns: repeat(2, 320px);
+            grid-template-columns: repeat(2, 350px);
             grid-column-gap: 25px;
             grid-row-gap: 25px;
             &-loader {
-                width: 320px;
+                width: 350px;
                 height: 425px;
             }
         }

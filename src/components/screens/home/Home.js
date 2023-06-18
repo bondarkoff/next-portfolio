@@ -28,7 +28,7 @@ export default function Home() {
 
     return (
         <>
-            <Sidebar />
+            {isLoading ? null : <Sidebar />}
             <div className='container'>
                 <Header loading={isLoading} />
                 <main>

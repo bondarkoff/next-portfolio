@@ -48,6 +48,28 @@ export const ProjectsContentLoader = () => {
                 className='projects__loader'>
                 <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
             </ContentLoader>
+            <ContentLoader
+                speed={2}
+                width={690}
+                height={480}
+                viewBox='0 0 690 480'
+                backgroundColor='#333333'
+                foregroundColor='#aaaeb9'
+                uniqueKey='4'
+                className='projects__loader'>
+                <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
+            </ContentLoader>
+            <ContentLoader
+                speed={2}
+                width={690}
+                height={480}
+                viewBox='0 0 690 480'
+                backgroundColor='#333333'
+                foregroundColor='#aaaeb9'
+                uniqueKey='4'
+                className='projects__loader'>
+                <rect x='0' y='0' rx='40' ry='40' width='690' height='480' />
+            </ContentLoader>
         </div>
     );
 };
