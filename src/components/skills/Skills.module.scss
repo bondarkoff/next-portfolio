@@ -60,3 +60,69 @@
         }
     }
 }
+
+@media (max-width: 1440px) {
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(4, 265px);
+            &-loader {
+                width: 265px;
+                height: 450px;
+            }
+        }
+        &__card {
+            width: 265px;
+            height: 450px;
+            &-notHovered {
+                width: 265px;
+                height: 450px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(4, 255px);
+            grid-column-gap: 15px;
+            &-loader {
+                width: 255px;
+                height: 450px;
+            }
+        }
+        &__card {
+            width: 255px;
+            height: 450px;
+            &-notHovered {
+                width: 255px;
+                height: 450px;
+                &:hover {
+                    transform: scale(1.07);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2, 320px);
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
+            &-loader {
+                width: 320px;
+                height: 425px;
+            }
+        }
+        &__card {
+            width: 320px;
+            height: 425px;
+            &-notHovered {
+                width: 320px;
+                height: 425px;
+            }
+        }
+    }
+}

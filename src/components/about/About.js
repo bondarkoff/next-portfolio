@@ -112,6 +112,7 @@ export default function About({ loading = false }) {
                         height={500}
                         alt='Picture'
                         className='image-1'
+                        style={{ opacity: loading ? 0 : 1 }}
                     />
                 </div>
                 <div
@@ -127,6 +128,7 @@ export default function About({ loading = false }) {
                             height={500}
                             alt='Picture'
                             className='image-2'
+                            style={{ opacity: loading ? 0 : 1 }}
                         />
                     )}
                 </div>

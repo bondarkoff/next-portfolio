@@ -74,6 +74,7 @@
         border-radius: 2.5rem;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04), 0px 3px 8px rgba(0, 0, 0, 0.12),
             0px 8px 16px rgba(0, 0, 0, 0.6);
+        left: -35px;
         &-first,
         &-second {
             z-index: 10;
@@ -91,6 +92,54 @@
         &-second {
             position: absolute;
             z-index: 5;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .about {
+        &__text {
+            p {
+                font-size: 20px;
+                line-height: 150%;
+            }
+        }
+        &__wrapper {
+            &-first,
+            &-second {
+                max-width: 450px;
+                max-height: 450px;
+                img {
+                    max-width: 450px;
+                    max-height: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        &__text {
+            p {
+                font-size: 18px;
+                line-height: 150%;
+            }
+            &-link {
+                width: 200px;
+                height: 45px;
+            }
+        }
+        &__wrapper {
+            &-first,
+            &-second {
+                max-width: 375px;
+                max-height: 375px;
+                img {
+                    max-width: 375px;
+                    max-height: 375px;
+                }
+            }
         }
     }
 }
