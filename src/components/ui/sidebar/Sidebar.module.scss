@@ -10,6 +10,7 @@
     backdrop-filter: blur(20px);
     border-radius: 80px;
     margin: 40px;
+    z-index: 50;
     &__link,
     &__active,
     &__social {
@@ -39,9 +40,9 @@
     &__active {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 32px;
-        transition: all 0.4s linear;
+        transition: all 0.2s linear;
         svg {
-            transition: all 0.4s linear;
+            transition: all 0.2s linear;
             transform: scale(1.2);
             path {
                 fill: #aaaeb9;
@@ -74,7 +75,7 @@
 @media (max-width: 1240px) {
     .sidebar {
         margin: 0;
-        margin-left: 10px;
+        margin-left: 5px;
         margin-top: 20px;
         &__link,
         &__active,
@@ -94,16 +95,38 @@
 @media (max-width: 1024px) {
     .sidebar {
         margin: 0;
-        margin-left: 10px;
-        margin-top: 20px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        &__divider {
+            width: 30px;
+            transform: rotate(90deg);
+        }
         &__link,
-        &__active,
-        &__social {
-            width: 42px;
-            height: 42px;
+        &__social,
+        &__active {
+            width: 60px;
+            height: 60px;
+            svg {
+                width: 30px;
+                height: 30px;
+                &:active {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
         }
         li {
-            margin-top: 10px;
+            margin: 0;
         }
     }
 }
