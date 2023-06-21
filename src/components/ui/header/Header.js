@@ -22,7 +22,9 @@ export const Header = ({ loading = false }) => {
                     </ContentLoader>
                 ) : (
                     <div className='d-flex flex-row aic'>
-                        <h1 className={styles['header__text-title']}>Bondarkoff —</h1>
+                        <h1 className={styles['header__text-title']}>
+                            Bondarkoff <span>—</span>
+                        </h1>
                         <Typed
                             strings={[
                                 'Frontend Developer.',

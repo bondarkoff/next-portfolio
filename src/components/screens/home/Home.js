@@ -28,15 +28,15 @@ export default function Home() {
 
     return (
         <>
-            {isLoading ? null : <Sidebar />}
+            {/* {isLoading ? null : <Sidebar />} */}
             <div className='container'>
                 <Header loading={isLoading} />
                 <main>
-                    <Projects items={projects} loading={isLoading} />
-                    <Skills loading={isLoading} />
-                    <About loading={isLoading} />
+                    {/* <Projects items={projects} loading={isLoading} /> */}
+                    {/* <Skills loading={isLoading} /> */}
+                    {/* <About loading={isLoading} /> */}
                 </main>
-                <Footer loading={isLoading} />
+                {/* <Footer loading={isLoading} /> */}
             </div>
         </>
     );

@@ -109,7 +109,7 @@
                 text-shadow: 6px 6px 6px #3333;
             }
             &-quote {
-                width: 80%;
+                width: 66%;
                 font-size: 30px;
             }
         }
@@ -126,6 +126,141 @@
                 width: 40%;
                 height: 40%;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__text {
+            &-typed {
+                font-size: 38px;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        padding-top: 60px;
+        &__text {
+            &-title {
+                margin-right: 0;
+                font-size: 52px;
+                &-loader {
+                    width: 100%;
+                }
+                span {
+                    display: none;
+                }
+            }
+            &-typed {
+                font-size: 46px;
+            }
+            &-quote {
+                margin-top: 30px;
+                text-align: center;
+                width: 100%;
+                text-shadow: 0 0 7px #000;
+                font-size: 32px;
+            }
+            div {
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        &__image {
+            width: 400px;
+            height: 400px;
+            opacity: 0.7;
+            &-wrapper {
+                filter: blur(3px);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-loader {
+                display: none;
+            }
+        }
+        &__blur {
+            bottom: -5px;
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    .header {
+        &__text {
+            &-typed {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        &__image {
+            width: 350px;
+            height: 350px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        &__text {
+            &-title {
+                font-size: 48px;
+            }
+            &-typed {
+                font-size: 30px;
+            }
+            &-quote {
+                font-size: 28px;
+            }
+        }
+        &__image {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        &__text {
+            &-title {
+                font-size: 46px;
+            }
+            &-quote {
+                font-size: 26px;
+            }
+            &-typed {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    .header {
+        &__text {
+            &-title {
+                font-size: 42px;
+            }
+            &-quote {
+                font-size: 24px;
+            }
+            &-typed {
+                font-size: 22px;
+            }
+        }
+        &__image {
+            width: 70%;
+            height: 70%;
         }
     }
 }
