@@ -44,27 +44,35 @@
 }
 
 @media (max-width: 1440px) {
-    .header__text-typed {
-        font-size: 46px;
-    }
-    .header__text-title-loader {
-        position: relative;
-        width: 90%;
+    .header__text {
+        &-typed {
+            font-size: 46px;
+        }
+        &-title {
+            &-loader {
+                position: relative;
+                width: 90%;
+            }
+        }
     }
 }
 
 @media (max-width: 1240px) {
-    .header__text-typed {
-        font-size: 38px;
-    }
-    .header__text-title {
-        font-size: 50px;
-    }
-    .header__text-quote {
-        font-size: 32px;
-    }
-    .header__text-title-loader {
-        width: 85%;
+    .header {
+        &__text {
+            &-typed {
+                font-size: 38px;
+            }
+            &-title {
+                font-size: 50px;
+                &-loader {
+                    width: 85%;
+                }
+            }
+            &-quote {
+                font-size: 32px;
+            }
+        }
     }
 }
 
