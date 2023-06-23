@@ -61,3 +61,123 @@
         }
     }
 }
+
+@media (max-width: 844px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 700px);
+            grid-template-rows: repeat(6, 450px);
+        }
+        &__loader {
+            width: 600px;
+            height: 450px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 650px);
+            grid-template-rows: repeat(6, 420px);
+        }
+        &__loader {
+            width: 600px;
+            height: 420px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 600px);
+            grid-template-rows: repeat(6, 400px);
+        }
+        &__loader {
+            width: 600px;
+            height: 400px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 550px);
+            grid-template-rows: repeat(6, 380px);
+        }
+        &__loader {
+            width: 550px;
+            height: 380px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 500px);
+            grid-template-rows: repeat(6, 360px);
+        }
+        &__loader {
+            width: 500px;
+            height: 360px;
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 420px);
+            grid-template-rows: repeat(6, 330px);
+        }
+        &__loader {
+            width: 420px;
+            height: 330px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 365px);
+            grid-template-rows: repeat(6, 300px);
+            grid-row-gap: 50px;
+        }
+        &__loader {
+            width: 365px;
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 300px);
+            grid-template-rows: repeat(6, 270px);
+            grid-row-gap: 40px;
+        }
+        &__loader {
+            width: 300px;
+            height: 270px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(1, 280px);
+            grid-template-rows: repeat(6, 260px);
+            grid-row-gap: 50px;
+        }
+        &__loader {
+            width: 280px;
+            height: 260px;
+        }
+    }
+}

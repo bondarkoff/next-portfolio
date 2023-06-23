@@ -30,3 +30,12 @@
         }
     }
 }
+
+@media (max-width: 425px) {
+    .tags {
+        &__item {
+            font-size: 13px;
+            line-height: 24px;
+        }
+    }
+}
