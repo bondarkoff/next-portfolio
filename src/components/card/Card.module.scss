@@ -275,6 +275,33 @@
 
 @media (max-width: 600px) {
     .card {
+        width: 510px;
+        height: 330px;
+        &__header {
+            height: 245px;
+            &-title {
+                font-size: 38px;
+            }
+            &-subtitle {
+                font-size: 20px;
+            }
+            &-image {
+                width: 510px;
+                height: 245px;
+            }
+        }
+        &__footer {
+            padding: 2px 15px;
+            height: 85px;
+        }
+        &:hover {
+            transform: scale(1.005);
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    .card {
         width: 420px;
         height: 330px;
         &__header {
