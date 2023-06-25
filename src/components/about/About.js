@@ -38,7 +38,7 @@ export default function About({ loading = false }) {
                 )}
                 {loading ? (
                     <>
-                        <div className='d-flex flex-col mt-10'>
+                        <div className='d-flex flex-col jcc aic mt-10'>
                             <ContentLoader
                                 speed={2}
                                 width={200}
@@ -56,7 +56,7 @@ export default function About({ loading = false }) {
                                 viewBox='0 0 280 50'
                                 backgroundColor='#333333'
                                 foregroundColor='#aaaeb9'
-                                className='mt-20'
+                                className='mt-20 ml-50'
                                 uniqueKey='about-links'>
                                 <rect x='0' y='0' rx='100' ry='100' width='50' height='50' />
                                 <rect x='60' y='0' rx='100' ry='100' width='50' height='50' />
