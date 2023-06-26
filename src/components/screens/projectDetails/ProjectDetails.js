@@ -1,4 +1,3 @@
-import ContentLoader from 'react-content-loader';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -24,60 +23,46 @@ export default function ProjectDetails({ project, loading = false }) {
             </Head>
             <div>
                 {project ? (
-                    <div className='container'>
+                    <div className='projects-container'>
+                        <div className={styles['header__nav']}>
+                            <Link href='/' className={styles['header__text-link']}>
+                                <ArrowIcon width={20} height={20} />
+                                <p>Back to home</p>
+                            </Link>
+                            <div className='d-flex jcsb aic'>
+                                {id <= 1 ? null : (
+                                    <Link
+                                        href={`/project/${parseInt(id) - 1}`}
+                                        className={styles['header__text-previous']}>
+                                        <ArrowIcon width={20} height={20} />
+                                        <p>To the previous project</p>
+                                    </Link>
+                                )}
+                                {id >= 6 ? null : (
+                                    <Link
+                                        href={`/project/${parseInt(id) + 1}`}
+                                        className={styles['header__text-next']}>
+                                        <p>To the next project</p>
+                                        <ArrowIcon width={20} height={20} />
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
                         <div className={styles.header}>
                             <div className={styles['header__text']}>
-                                <div className='d-flex jcsb aic'>
-                                    <Link href='/' className={styles['header__text-link']}>
-                                        <ArrowIcon width={20} height={20} />
-                                        <p>Back to home</p>
-                                    </Link>
-                                    <div className='d-flex jcsb aic'>
-                                        {id <= 1 ? null : (
-                                            <Link
-                                                href={`/project/${parseInt(id) - 1}`}
-                                                className={styles['header__text-previous']}>
-                                                <ArrowIcon width={20} height={20} />
-                                                <p>To the previous project</p>
-                                            </Link>
-                                        )}
-                                        {id >= 6 ? null : (
-                                            <Link
-                                                href={`/project/${parseInt(id) + 1}`}
-                                                className={styles['header__text-next']}>
-                                                <p>To the next project</p>
-                                                <ArrowIcon width={20} height={20} />
-                                            </Link>
-                                        )}
-                                    </div>
-                                </div>
-
                                 {loading ? (
-                                    <ContentLoader
-                                        speed={2}
-                                        width={950}
-                                        height={90}
-                                        viewBox='0 0 950 90'
-                                        backgroundColor='#333333'
-                                        foregroundColor='#aaaeb9'
-                                        uniqueKey='title'>
-                                        <rect x='0' y='0' rx='8' ry='8' width='950' height='90' />
-                                    </ContentLoader>
+                                    <div>Loading...</div>
                                 ) : (
-                                    <h2 className={styles['header__text-title']}>{title}</h2>
+                                    <h2 className={styles['header__text-title']}>
+                                        {title}
+                                        <span className={styles['header__text-divider']}>-</span>
+                                        <span className={styles['header__text-span']}>
+                                            {isReact ? 'React' : isJS ? 'Js' : 'NPM'}
+                                        </span>
+                                    </h2>
                                 )}
                                 {loading ? (
-                                    <ContentLoader
-                                        speed={2}
-                                        width={950}
-                                        height={178}
-                                        viewBox='0 0 950 178'
-                                        backgroundColor='#333333'
-                                        foregroundColor='#aaaeb9'
-                                        className='mt-15'
-                                        uniqueKey='description'>
-                                        <rect x='0' y='0' rx='8' ry='8' width='950' height='178' />
-                                    </ContentLoader>
+                                    <div>Loading...</div>
                                 ) : (
                                     <div className={styles['header__text-descr']}>
                                         <p className='mt-10'>{description}</p>
@@ -89,35 +74,10 @@ export default function ProjectDetails({ project, loading = false }) {
                                         <CardTags stack={stack} />
                                     </div>
                                 ) : (
-                                    <ContentLoader
-                                        speed={2}
-                                        width={950}
-                                        height={30}
-                                        viewBox='0 0 950 30'
-                                        backgroundColor='#333333'
-                                        foregroundColor='#aaaeb9'
-                                        className='mt-10'
-                                        uniqueKey='stack'>
-                                        <rect x='0' y='0' rx='8' ry='8' width='100' height='30' />
-                                        <rect x='110' y='0' rx='8' ry='8' width='100' height='30' />
-                                        <rect x='220' y='0' rx='8' ry='8' width='100' height='30' />
-                                        <rect x='330' y='0' rx='8' ry='8' width='100' height='30' />
-                                        <rect x='440' y='0' rx='8' ry='8' width='100' height='30' />
-                                    </ContentLoader>
+                                    <div>Loading...</div>
                                 )}
                                 {loading ? (
-                                    <ContentLoader
-                                        speed={2}
-                                        width={950}
-                                        height={40}
-                                        viewBox='0 0 950 40'
-                                        backgroundColor='#333333'
-                                        foregroundColor='#aaaeb9'
-                                        className='mt-5'
-                                        uniqueKey='buttons'>
-                                        <rect x='0' y='0' rx='6' ry='6' width='150' height='40' />
-                                        <rect x='160' y='0' rx='6' ry='6' width='150' height='40' />
-                                    </ContentLoader>
+                                    <div>Loading...</div>
                                 ) : (
                                     <div className='d-flex aic'>
                                         {github ? (
@@ -127,7 +87,9 @@ export default function ProjectDetails({ project, loading = false }) {
                                                 target='_blank'>
                                                 Github
                                             </a>
-                                        ) : null}
+                                        ) : (
+                                            <div>Loading...</div>
+                                        )}
                                         {demo ? (
                                             <a
                                                 href={demo}
@@ -135,23 +97,14 @@ export default function ProjectDetails({ project, loading = false }) {
                                                 target='_blank'>
                                                 Demo
                                             </a>
-                                        ) : null}
+                                        ) : (
+                                            <div>Loading...</div>
+                                        )}
                                     </div>
                                 )}
                             </div>
-                            {loading ? (
-                                <ContentLoader
-                                    speed={2}
-                                    width={450}
-                                    height={450}
-                                    viewBox='0 0 450 450'
-                                    backgroundColor='#333333'
-                                    foregroundColor='#aaaeb9'
-                                    uniqueKey='image'>
-                                    <rect x='0' y='0' rx='100' ry='100' width='450' height='450' />
-                                </ContentLoader>
-                            ) : (
-                                <div>
+                            {loading ? null : (
+                                <div className={styles['header__logo']}>
                                     {isReact ? (
                                         <ReactIcon width={450} height={450} firstPath={'#AAAEB9'} />
                                     ) : isJS ? (
@@ -166,7 +119,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                 </div>
                             )}
                         </div>
-                        <Slider project={project} loading={loading} />
+                        {loading ? <div>Loading...</div> : <Slider project={project} />}
                     </div>
                 ) : (
                     <div>Loading...</div>

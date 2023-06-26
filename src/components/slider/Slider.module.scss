@@ -29,3 +29,167 @@
         }
     }
 }
+
+@media (max-width: 1440px) {
+    .slider {
+        &__item {
+            &-img {
+                width: 1100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .slider {
+        padding-top: 100px;
+        &__item {
+            height: 675px;
+            &-img {
+                width: 100%;
+                height: 600px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .slider {
+        padding-top: 100px;
+        &__item {
+            height: 665px;
+            &-img {
+                height: 560px;
+            }
+        }
+    }
+}
+
+@media (max-width: 864px) {
+    .slider {
+        padding-top: 80px;
+        &__item {
+            height: 625px;
+            &-img {
+                height: 520px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .slider {
+        padding-top: 60px;
+        &__item {
+            height: 560px;
+            &-img {
+                height: 470px;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .slider {
+        padding-top: 40px;
+        &__wrapper {
+            padding: 0px;
+        }
+        &__item {
+            height: 500px;
+            &-img {
+                height: 420px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .slider {
+        &__item {
+            height: 475px;
+            &-img {
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .slider {
+        &__title {
+            font-size: 36px;
+            line-height: 38px;
+        }
+        &__item {
+            height: 450px;
+            &-img {
+                height: 375px;
+            }
+        }
+    }
+}
+
+@media (max-width: 512px) {
+    .slider {
+        &__item {
+            height: 420px;
+            &-img {
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .slider {
+        &__item {
+            height: 400px;
+            &-img {
+                border-radius: 20px;
+                width: 100%;
+                height: 330px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .slider {
+        &__item {
+            height: 400px;
+            &-img {
+                width: 100%;
+                height: 330px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .slider {
+        &__title {
+            font-size: 32px;
+            line-height: 36px;
+        }
+        &__item {
+            height: 100%;
+            &-img {
+                width: 100%;
+                height: 280px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .slider {
+        &__item {
+            height: 100%;
+            &-img {
+                width: 100%;
+                height: 260px;
+            }
+        }
+    }
+}
