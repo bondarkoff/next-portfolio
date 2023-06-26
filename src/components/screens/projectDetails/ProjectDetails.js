@@ -50,9 +50,7 @@ export default function ProjectDetails({ project, loading = false }) {
                         </div>
                         <div className={styles.header}>
                             <div className={styles['header__text']}>
-                                {loading ? (
-                                    <div>Loading...</div>
-                                ) : (
+                                {loading ? null : (
                                     <h2 className={styles['header__text-title']}>
                                         {title}
                                         <span className={styles['header__text-divider']}>-</span>
@@ -61,9 +59,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                         </span>
                                     </h2>
                                 )}
-                                {loading ? (
-                                    <div>Loading...</div>
-                                ) : (
+                                {loading ? null : (
                                     <div className={styles['header__text-descr']}>
                                         <p className='mt-10'>{description}</p>
                                         <p className='mt-10'>{functionality}</p>
@@ -73,12 +69,8 @@ export default function ProjectDetails({ project, loading = false }) {
                                     <div className='mt-3'>
                                         <CardTags stack={stack} />
                                     </div>
-                                ) : (
-                                    <div>Loading...</div>
-                                )}
-                                {loading ? (
-                                    <div>Loading...</div>
-                                ) : (
+                                ) : null}
+                                {loading ? null : (
                                     <div className='d-flex aic'>
                                         {github ? (
                                             <a
@@ -87,9 +79,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                                 target='_blank'>
                                                 Github
                                             </a>
-                                        ) : (
-                                            <div>Loading...</div>
-                                        )}
+                                        ) : null}
                                         {demo ? (
                                             <a
                                                 href={demo}
@@ -97,9 +87,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                                 target='_blank'>
                                                 Demo
                                             </a>
-                                        ) : (
-                                            <div>Loading...</div>
-                                        )}
+                                        ) : null}
                                     </div>
                                 )}
                             </div>
@@ -119,7 +107,7 @@ export default function ProjectDetails({ project, loading = false }) {
                                 </div>
                             )}
                         </div>
-                        {loading ? <div>Loading...</div> : <Slider project={project} />}
+                        {loading ? null : <Slider project={project} />}
                     </div>
                 ) : (
                     <div>Loading...</div>
