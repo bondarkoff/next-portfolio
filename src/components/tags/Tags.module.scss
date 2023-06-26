@@ -31,10 +31,22 @@
     }
 }
 
+@media (max-width: 512px) {
+    .tags {
+        &__item {
+            margin: 4px 4px 0 0;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+}
+
 @media (max-width: 425px) {
     .tags {
         &__item {
-            font-size: 13px;
+            margin: 2px 2px 0 0;
+            font-size: 12px;
             line-height: 24px;
         }
     }
